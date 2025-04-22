@@ -1,0 +1,12 @@
+[2025-04-21 23:33:42][Global][DEBUG] Application started
+[2025-04-21 23:33:42][Global][INFO] This is an info message
+[2025-04-21 23:33:42][Global][ERROR] Something went wrong!
+[2025-04-21 23:33:42][Global][DEBUG] User admin logged in from IP 192.168.1.1
+[2025-04-21 23:37:42][Global][DEBUG] Application started
+[2025-04-21 23:37:42][Global][INFO] This is an info message
+[2025-04-21 23:37:42][Global][ERROR] Something went wrong!
+[2025-04-21 23:37:42][Global][DEBUG] User admin logged in from IP 192.168.1.1
+[2025-04-22 00:01:31][Global][DEBUG] Application started
+[2025-04-22 00:01:31][Global][INFO] This is an info message
+[2025-04-22 00:01:31][Global][ERROR] Something went wrong!
+[2025-04-22 00:01:31][Global][DEBUG] User admin logged in from IP 192.168.1.1

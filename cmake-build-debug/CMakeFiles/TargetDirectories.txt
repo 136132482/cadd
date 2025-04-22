@@ -1,0 +1,16 @@
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/Reflection.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/Reflection_dynamic.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/duotai.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/template.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/vector.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/comment_util.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/JsonValue.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/JsonValueUtil.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/ClassRegister.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/test.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/ReflectionGenerator.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/GenericFactory.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/file_main.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/Logger.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/rebuild_cache.dir

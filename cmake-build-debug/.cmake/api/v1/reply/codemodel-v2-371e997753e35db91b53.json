@@ -1,0 +1,177 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cadd",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassRegister::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassRegister-Debug-958a7e880ca6432cd14c.json",
+					"name" : "ClassRegister",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GenericFactory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GenericFactory-Debug-60c42efeda77375593bc.json",
+					"name" : "GenericFactory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "JsonValue::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JsonValue-Debug-d5dfa26bf978a2012b32.json",
+					"name" : "JsonValue",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "JsonValueUtil::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JsonValueUtil-Debug-294ac9b7bf6e895b1662.json",
+					"name" : "JsonValueUtil",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Logger::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Logger-Debug-5d2d875b354267525d0e.json",
+					"name" : "Logger",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Reflection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Reflection-Debug-729ba82da56b97dd2a83.json",
+					"name" : "Reflection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReflectionGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReflectionGenerator-Debug-f9bfb3db3354637eda35.json",
+					"name" : "ReflectionGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Reflection_dynamic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Reflection_dynamic-Debug-66839b24154d05117237.json",
+					"name" : "Reflection_dynamic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "comment_util::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-comment_util-Debug-ac7103f112dd400f7591.json",
+					"name" : "comment_util",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "duotai::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-duotai-Debug-934a31fff1b0254095b4.json",
+					"name" : "duotai",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "file_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-file_main-Debug-d45195c04224adb27108.json",
+					"name" : "file_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "template::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-template-Debug-94457b9695451ec45863.json",
+					"name" : "template",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-Debug-12f3e2bc9e4f570a0c77.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vector-Debug-30f25cbeb27fab26844c.json",
+					"name" : "vector",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug",
+		"source" : "C:/Users/Administrator/CLionProjects/cadd"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

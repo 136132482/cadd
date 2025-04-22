@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cadd"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\.vcpkg-clion\;CMake Files\..\..\.vcpkg-clion\vcpkg1\;CMake Files\..\..\.vcpkg-clion\vcpkg1\scripts\;CMake Files\..\..\.vcpkg-clion\vcpkg1\scripts\buildsystems\;CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\;CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\;CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\;CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\;CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\zlib\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reflection">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Reflection.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reflection"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reflection/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Reflection.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reflection/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reflection_dynamic">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Reflection_dynamic.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reflection_dynamic"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Reflection_dynamic/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Reflection_dynamic.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Reflection_dynamic/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="duotai">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/duotai.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 duotai"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="duotai/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/duotai.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 duotai/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="template">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/template.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 template"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="template/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/template.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 template/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vector">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/vector.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 vector"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vector/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/vector.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 vector/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="comment_util">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/comment_util.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 comment_util"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="comment_util/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/comment_util.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 comment_util/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JsonValue">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/JsonValue.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 JsonValue"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JsonValue/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/JsonValue.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 JsonValue/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JsonValueUtil">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/JsonValueUtil.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 JsonValueUtil"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JsonValueUtil/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/JsonValueUtil.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 JsonValueUtil/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ClassRegister">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/ClassRegister.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 ClassRegister"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ClassRegister/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/ClassRegister.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 ClassRegister/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReflectionGenerator">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/ReflectionGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReflectionGenerator"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ReflectionGenerator/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/ReflectionGenerator.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 ReflectionGenerator/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GenericFactory">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/GenericFactory.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 GenericFactory"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GenericFactory/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/GenericFactory.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 GenericFactory/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="file_main">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/file_main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/include"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 file_main"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="file_main/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/file_main.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/include"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 file_main/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Logger">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Logger.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Logger"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Logger/fast">
+				<Option output="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Logger.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32"/>
+					<Add directory="D:/msys64/mingw64/include/c++/14.2.0/backward"/>
+					<Add directory="D:/msys64/mingw64/lib/clang/19/include"/>
+					<Add directory="D:/msys64/mingw64/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 Logger/fast"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/msys64/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/duotai.cpp">
+			<Option target="duotai"/>
+			<Option target="template"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/template.cpp">
+			<Option target="template"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/test.cpp">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/AIGCJson.hpp">
+			<Option target="JsonValueUtil"/>
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/JsonValueUtil.cpp">
+			<Option target="comment_util"/>
+			<Option target="JsonValue"/>
+			<Option target="JsonValueUtil"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/Logger/Logger.cpp">
+			<Option target="file_main"/>
+			<Option target="Logger"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/Logger/Logger.h">
+			<Option target="file_main"/>
+			<Option target="Logger"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/Logger/logger_test.cpp">
+			<Option target="Logger"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/MyObject.h">
+			<Option target="JsonValueUtil"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/comment_util.cpp">
+			<Option target="comment_util"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/GenericFactory.cpp">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/GenericFactory.h">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/MathProduct.cpp">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/MathProduct.h">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/MathProductExtensions.h">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/test.cpp">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/factory/test.h">
+			<Option target="GenericFactory"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/fileIo/FileTransferUtility.cpp">
+			<Option target="file_main"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/fileIo/FileTransferUtility.h">
+			<Option target="file_main"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/fileIo/file_main.cpp">
+			<Option target="file_main"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/ClassRegister.cpp">
+			<Option target="ClassRegister"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/ClassRegister.h">
+			<Option target="ClassRegister"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/Reflection.cpp">
+			<Option target="Reflection"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/Reflection.h">
+			<Option target="Reflection"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/ReflectionGenerator.cpp">
+			<Option target="ReflectionGenerator"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/base.cpp">
+			<Option target="ClassRegister"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/util/register/dynamic_reflection.cpp">
+			<Option target="Reflection_dynamic"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/vector.cpp">
+			<Option target="vector"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\scripts\buildsystems\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/CURLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/CURLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/CURLTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/CURLTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/CURLTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/curl/vcpkg-cmake-wrapper.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\curl\"/>
+		</Unit>
+		<Unit filename="C:/Users/Administrator/CLionProjects/cadd/../../.vcpkg-clion/vcpkg1/installed/x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake">
+			<Option virtualFolder="CMake Files\..\..\.vcpkg-clion\vcpkg1\installed\x64-windows\share\zlib\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
