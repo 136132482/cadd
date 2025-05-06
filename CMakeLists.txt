@@ -1,39 +1,69 @@
 cmake_minimum_required(VERSION 3.27)
-## vcpkg配置，必须位于project之前
-#if(DEFINED ENV{VCPKG_ROOT})
-#    set(VCPKG_ROOT "$ENV{VCPKG_ROOT}" CACHE PATH "") # 从环境变量中读取vcpkg根目录
-#else()
-#    set(VCPKG_ROOT "C:\\Users\\Administrator\\CLionProjects\\cadd\\vcpkg" CACHE PATH "") # 手动设置vcpkg根目录
-#endif()
-#
-#message("set VCPKG_ROOT: ${VCPKG_ROOT}")
-#set(VCPKG_FEATURE_FLAGS "version") # 用于支持自定义依赖版本
-#set(CMAKE_TOOLCHAIN_FILE "${VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake") # 设置vcpkg工具链
 
+
+# 强制使用 vcpkg 工具链（必须在 project() 之前）
+set(CMAKE_TOOLCHAIN_FILE "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
+set(VCPKG_TARGET_TRIPLET "x64-mingw-dynamic" CACHE STRING "")
+set(VCPKG_HOST_TRIPLET "x64-mingw-dynamic" CACHE STRING "")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1")
 
 project(cadd)
 
-#include_directories("C:\\Users\\Administrator\\.vcpkg-clion\\vcpkg1\\installed\\x64-windows\\include")
-#if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++")
-#elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-#    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
-#elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
-#    set(LLVM_CONFIG true)
-#    set(CLANG_INCLUDEDIR "D:/Program Files/LLVM/include")
-#    set(CLANG_LIBDIR "D:/Program Files/LLVM/lib")
-#endif()
+# 编译器设置（使用 MSYS2 的 Clang）
+set(CMAKE_C_COMPILER "D:/msys64/mingw64/bin/clang.exe")
+set(CMAKE_CXX_COMPILER "D:/msys64/mingw64/bin/clang++.exe")
 
+# 强制使用 MinGW 的 libstdc++（关键兼容性设置）
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libstdc++")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fuse-ld=lld -static-libgcc -static-libstdc++")
 
+# 路径配置（优先级：vcpkg > MSYS2）
+list(APPEND CMAKE_PREFIX_PATH
+        "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic"
+        "D:/msys64/mingw64"
+)
 
-# 添加在find_package之前
-set(CMAKE_PREFIX_PATH "D:/msys64/mingw64")
-set(CMAKE_MODULE_PATH "D:/msys64/mingw64/lib/cmake")
+# 移除可能冲突的 Windows 路径
+get_directory_property(inc_dirs INCLUDE_DIRECTORIES)
+foreach(dir ${inc_dirs})
+    if(dir MATCHES "x64-windows" OR dir MATCHES "Program Files")
+        list(REMOVE_ITEM inc_dirs ${dir})
+    endif()
+endforeach()
+set_directory_properties(PROPERTIES INCLUDE_DIRECTORIES "${inc_dirs}")
+
+set(Boost_USE_STATIC_LIBS ON)
+set(BOOST_ROOT "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic")
+find_package(Boost REQUIRED COMPONENTS date_time system)
+
+# 查找所有必需的包
 find_package(CURL REQUIRED)
+find_package(Drogon REQUIRED COMPONENTS jsoncpp openssl postgresql)
+find_package(SOCI REQUIRED COMPONENTS core postgresql)
+find_package(PostgreSQL REQUIRED )
+find_package(OpenSSL REQUIRED)
 
 
+# C++标准设置
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 添加Logger库
+add_library(LoggerLib STATIC
+        util/Logger/Logger.cpp
+        util/Logger/Logger.h
+)
+
+# 添加FileTransferUtility库
+add_library(FileTransferUtility STATIC
+        util/fileIo/FileTransferUtility.cpp
+        util/fileIo/FileTransferUtility.h
+)
+
+add_library(CryptoUtilLib STATIC
+        util/ssl/CryptoUtil.h
+        util/ssl/CryptoUtil.cpp  # 添加源文件
+)
 
 add_executable(Reflection
         util/register/Reflection.cpp
@@ -51,16 +81,93 @@ add_executable(test test.cpp  util/AIGCJson.hpp)
 add_executable(ReflectionGenerator util/register/ReflectionGenerator.cpp)
 add_executable(GenericFactory util/factory/GenericFactory.cpp util/factory/GenericFactory.h util/factory/MathProduct.cpp util/factory/MathProduct.h util/factory/test.cpp
         util/factory/MathProductExtensions.h)
-add_executable(file_main util/fileIo/file_main.cpp  util/fileIo/FileTransferUtility.cpp util/fileIo/FileTransferUtility.h util/Logger/Logger.h util/Logger/Logger.cpp )
-# 关键修改4：链接库（必须按此顺序）
-target_link_libraries(file_main PRIVATE
-        CURL::libcurl
-        ws2_32  # Windows sockets
-        crypt32  # Crypto API
-        ssl      # OpenSSL
-        crypto   # OpenSSL
-        z        # zlib
-)
-target_link_libraries(file_main PRIVATE CURL::libcurl)
 
-add_executable(Logger util/Logger/Logger.h util/Logger/Logger.cpp util/Logger/logger_test.cpp )
+
+add_executable(CryptoUtil  util/ssl/CryptoUtil.cpp)
+target_link_libraries(CryptoUtil PRIVATE
+        OpenSSL::Crypto
+        CryptoUtilLib
+)
+
+
+# 可执行文件配置示例
+add_executable(drogon_test util/drogon/drogon_test.cpp)
+target_link_libraries(drogon_test PRIVATE
+        Drogon::Drogon
+        jsoncpp
+        OpenSSL::SSL
+        OpenSSL::Crypto
+        pthread
+        ws2_32
+        crypt32
+        LoggerLib
+)
+
+# SOCI数据库应用
+add_executable(SociDB util/pgsql/SociDemo.cpp util/pgsql/SociDemo.h util/pgsql/SociDB.h util/pgsql/soci_utils.h)
+target_link_libraries(SociDB PRIVATE
+        SOCI::soci_core
+        SOCI::soci_postgresql
+        PostgreSQL::PostgreSQL
+        OpenSSL::SSL
+        OpenSSL::Crypto
+        Boost::date_time
+        Boost::system
+        ws2_32
+        secur32
+        CryptoUtilLib
+        LoggerLib
+)
+
+
+
+# 文件传输应用
+add_executable(file_main util/fileIo/file_main.cpp)
+target_link_libraries(file_main PRIVATE
+        FileTransferUtility
+        LoggerLib
+        CURL::libcurl
+        ws2_32
+        crypt32
+)
+
+# 线程执行器
+add_executable(ThreadExecutor util/ThreadExecutor/ThreadExecutor.cpp util/ThreadExecutor/ThreadExecutor.h util/ThreadExecutor/thread_main.cpp)
+target_link_libraries(ThreadExecutor PRIVATE
+        FileTransferUtility
+        LoggerLib
+        CURL::libcurl
+)
+
+
+
+
+
+# 其他测试程序
+add_executable(logger_test util/Logger/logger_test.cpp)
+target_link_libraries(logger_test PRIVATE LoggerLib)
+
+# 通用链接配置（适用于所有目标）
+function(configure_common_target target)
+    target_compile_options(${target} PRIVATE
+            -Wall
+            -Wextra
+            -Wno-unused-parameter
+    )
+    target_link_options(${target} PRIVATE
+            -Wl,--allow-multiple-definition  # 解决符号冲突
+            -Wl,--start-group  # 处理循环依赖
+    )
+    target_link_libraries(${target} PRIVATE
+            gdi32  # 图形接口（某些库需要）
+            advapi32  # 安全相关
+    )
+endfunction()
+
+# 应用到所有目标
+get_property(targets DIRECTORY PROPERTY BUILDSYSTEM_TARGETS)
+foreach(target ${targets})
+    if(TARGET ${target} AND NOT target MATCHES "LoggerLib|FileTransferUtility")
+        configure_common_target(${target})
+    endif()
+endforeach()

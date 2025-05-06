@@ -5,7 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       The system is: Windows - 10.0.22621 - AMD64
   -
@@ -14,7 +14,7 @@ events:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: D:/msys64/mingw64/bin/clang.exe 
@@ -28,7 +28,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
       
       The C compiler identification is Clang, found in:
-        C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
+        D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.exe
       
   -
     kind: "message-v1"
@@ -36,7 +36,7 @@ events:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: D:/msys64/mingw64/bin/clang++.exe 
@@ -50,63 +50,64 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is Clang, found in:
-        C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
+        D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx"
-      binary: "C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx"
+      source: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd"
+      binary: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_INSTALLED_DIR: "C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed"
+      VCPKG_HOST_TRIPLET: "x64-mingw-dynamic"
+      VCPKG_INSTALLED_DIR: "E:/.vcpkg-clion/vcpkg1/installed"
       VCPKG_PREFER_SYSTEM_LIBS: "OFF"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/Users/Administrator/.vcpkg-clion/vcpkg1"
+      VCPKG_TARGET_TRIPLET: "x64-mingw-dynamic"
+      Z_VCPKG_ROOT_DIR: "E:/.vcpkg-clion/vcpkg1"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx'
+        Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd'
         
-        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_65116/fast
-        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_65116.dir\\build.make CMakeFiles/cmTC_65116.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx'
-        Building C object CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj
-        D:\\msys64\\mingw64\\bin\\clang.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_65116.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles\\cmTC_65116.dir\\CMakeCCompilerABI.c.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
-        clang version 19.1.4
+        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_7c3ff/fast
+        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_7c3ff.dir\\build.make CMakeFiles/cmTC_7c3ff.dir/build
+        mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd'
+        Building C object CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj
+        D:\\msys64\\mingw64\\bin\\clang.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_7c3ff.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles\\cmTC_7c3ff.dir\\CMakeCCompilerABI.c.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"
+        clang version 20.1.3
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: D:/msys64/mingw64/bin
          (in-process)
-         "D:/msys64/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx -v -fcoverage-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx -resource-dir D:/msys64/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_65116.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/lib/clang/19/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_65116.dir\\\\CMakeCCompilerABI.c.obj" -x c "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCCompilerABI.c"
-        clang -cc1 version 19.1.4 based upon LLVM 19.1.4 default target x86_64-w64-windows-gnu
+         "D:/msys64/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd -v -fcoverage-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd -resource-dir D:/msys64/mingw64/lib/clang/20 -dependency-file "CMakeFiles\\\\cmTC_7c3ff.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/lib/clang/20/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_7c3ff.dir\\\\CMakeCCompilerABI.c.obj" -x c "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCCompilerABI.c"
+        clang -cc1 version 20.1.3 based upon LLVM 20.1.3 default target x86_64-w64-windows-gnu
         ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include"
         ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/usr/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         D:/msys64/mingw64/lib/clang/19/include
+         D:/msys64/mingw64/lib/clang/20/include
          D:/msys64/mingw64/include
         End of search list.
-        Linking C executable cmTC_65116.exe
-        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_65116.dir\\link.txt --verbose=1
-        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_65116.dir/objects.a
-        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_65116.dir/objects.a @CMakeFiles\\cmTC_65116.dir\\objects1.rsp
-        D:\\msys64\\mingw64\\bin\\clang.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_65116.dir/objects.a -Wl,--no-whole-archive -o cmTC_65116.exe -Wl,--out-implib,libcmTC_65116.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
-        clang version 19.1.4
+        Linking C executable cmTC_7c3ff.exe
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_7c3ff.dir\\link.txt --verbose=1
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_7c3ff.dir/objects.a
+        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_7c3ff.dir/objects.a @CMakeFiles\\cmTC_7c3ff.dir\\objects1.rsp
+        D:\\msys64\\mingw64\\bin\\clang.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_7c3ff.dir/objects.a -Wl,--no-whole-archive -o cmTC_7c3ff.exe -Wl,--out-implib,libcmTC_7c3ff.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        clang version 20.1.3
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: D:/msys64/mingw64/bin
-         "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_65116.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/19/lib/windows --whole-archive "CMakeFiles\\\\cmTC_65116.dir/objects.a" --no-whole-archive --out-implib libcmTC_65116.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
-        mingw32-make[1]: Leaving directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx'
+         "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_7c3ff.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/20/lib/windows --whole-archive "CMakeFiles\\\\cmTC_7c3ff.dir/objects.a" --no-whole-archive --out-implib libcmTC_7c3ff.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        mingw32-make[1]: Leaving directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd'
         
       exitCode: 0
   -
@@ -114,17 +115,17 @@ events:
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [D:/msys64/mingw64/lib/clang/19/include]
+          add: [D:/msys64/mingw64/lib/clang/20/include]
           add: [D:/msys64/mingw64/include]
         end of search list found
-        collapse include dir [D:/msys64/mingw64/lib/clang/19/include] ==> [D:/msys64/mingw64/lib/clang/19/include]
+        collapse include dir [D:/msys64/mingw64/lib/clang/20/include] ==> [D:/msys64/mingw64/lib/clang/20/include]
         collapse include dir [D:/msys64/mingw64/include] ==> [D:/msys64/mingw64/include]
-        implicit include dirs: [D:/msys64/mingw64/lib/clang/19/include;D:/msys64/mingw64/include]
+        implicit include dirs: [D:/msys64/mingw64/lib/clang/20/include;D:/msys64/mingw64/include]
       
       
   -
@@ -132,59 +133,59 @@ events:
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.lld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx']
+        ignore line: [Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd']
         ignore line: []
-        ignore line: [Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_65116/fast]
-        ignore line: [D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_65116.dir\\build.make CMakeFiles/cmTC_65116.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx']
-        ignore line: [Building C object CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [D:\\msys64\\mingw64\\bin\\clang.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_65116.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles\\cmTC_65116.dir\\CMakeCCompilerABI.c.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"]
-        ignore line: [clang version 19.1.4]
+        ignore line: [Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_7c3ff/fast]
+        ignore line: [D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_7c3ff.dir\\build.make CMakeFiles/cmTC_7c3ff.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd']
+        ignore line: [Building C object CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\msys64\\mingw64\\bin\\clang.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_7c3ff.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles\\cmTC_7c3ff.dir\\CMakeCCompilerABI.c.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [clang version 20.1.3]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: D:/msys64/mingw64/bin]
         ignore line: [ (in-process)]
-        ignore line: [ "D:/msys64/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx -v -fcoverage-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zhtvnx -resource-dir D:/msys64/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_65116.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_65116.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/lib/clang/19/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_65116.dir\\\\CMakeCCompilerABI.c.obj" -x c "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCCompilerABI.c"]
-        ignore line: [clang -cc1 version 19.1.4 based upon LLVM 19.1.4 default target x86_64-w64-windows-gnu]
+        ignore line: [ "D:/msys64/mingw64/bin/clang.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd -v -fcoverage-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c239gd -resource-dir D:/msys64/mingw64/lib/clang/20 -dependency-file "CMakeFiles\\\\cmTC_7c3ff.dir\\\\CMakeCCompilerABI.c.obj.d" -MT CMakeFiles/cmTC_7c3ff.dir/CMakeCCompilerABI.c.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/lib/clang/20/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_7c3ff.dir\\\\CMakeCCompilerABI.c.obj" -x c "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCCompilerABI.c"]
+        ignore line: [clang -cc1 version 20.1.3 based upon LLVM 20.1.3 default target x86_64-w64-windows-gnu]
         ignore line: [ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include"]
         ignore line: [ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/usr/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ D:/msys64/mingw64/lib/clang/19/include]
+        ignore line: [ D:/msys64/mingw64/lib/clang/20/include]
         ignore line: [ D:/msys64/mingw64/include]
         ignore line: [End of search list.]
-        ignore line: [Linking C executable cmTC_65116.exe]
-        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_65116.dir\\link.txt --verbose=1]
-        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_65116.dir/objects.a]
-        ignore line: [D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_65116.dir/objects.a @CMakeFiles\\cmTC_65116.dir\\objects1.rsp]
-        ignore line: [D:\\msys64\\mingw64\\bin\\clang.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_65116.dir/objects.a -Wl --no-whole-archive -o cmTC_65116.exe -Wl --out-implib libcmTC_65116.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
-        ignore line: [clang version 19.1.4]
+        ignore line: [Linking C executable cmTC_7c3ff.exe]
+        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_7c3ff.dir\\link.txt --verbose=1]
+        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_7c3ff.dir/objects.a]
+        ignore line: [D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_7c3ff.dir/objects.a @CMakeFiles\\cmTC_7c3ff.dir\\objects1.rsp]
+        ignore line: [D:\\msys64\\mingw64\\bin\\clang.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_7c3ff.dir/objects.a -Wl --no-whole-archive -o cmTC_7c3ff.exe -Wl --out-implib libcmTC_7c3ff.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [clang version 20.1.3]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: D:/msys64/mingw64/bin]
-        link line: [ "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_65116.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/19/lib/windows --whole-archive "CMakeFiles\\\\cmTC_65116.dir/objects.a" --no-whole-archive --out-implib libcmTC_65116.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        link line: [ "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_7c3ff.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/20/lib/windows --whole-archive "CMakeFiles\\\\cmTC_7c3ff.dir/objects.a" --no-whole-archive --out-implib libcmTC_7c3ff.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [D:/msys64/mingw64/bin/ld] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_65116.exe] ==> ignore
+          arg [cmTC_7c3ff.exe] ==> ignore
           arg [D:/msys64/mingw64/lib/crt2.o] ==> obj [D:/msys64/mingw64/lib/crt2.o]
           arg [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0]
           arg [-LD:/msys64/mingw64/x86_64-w64-mingw32/lib] ==> dir [D:/msys64/mingw64/x86_64-w64-mingw32/lib]
           arg [-LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib] ==> dir [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib]
           arg [-LD:/msys64/mingw64/lib] ==> dir [D:/msys64/mingw64/lib]
-          arg [-LD:/msys64/mingw64/lib/clang/19/lib/windows] ==> dir [D:/msys64/mingw64/lib/clang/19/lib/windows]
+          arg [-LD:/msys64/mingw64/lib/clang/20/lib/windows] ==> dir [D:/msys64/mingw64/lib/clang/20/lib/windows]
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\\\cmTC_65116.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\\\cmTC_7c3ff.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_65116.dll.a] ==> ignore
+          arg [libcmTC_7c3ff.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -216,10 +217,10 @@ events:
         collapse library dir [D:/msys64/mingw64/x86_64-w64-mingw32/lib] ==> [D:/msys64/mingw64/x86_64-w64-mingw32/lib]
         collapse library dir [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib] ==> [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib]
         collapse library dir [D:/msys64/mingw64/lib] ==> [D:/msys64/mingw64/lib]
-        collapse library dir [D:/msys64/mingw64/lib/clang/19/lib/windows] ==> [D:/msys64/mingw64/lib/clang/19/lib/windows]
+        collapse library dir [D:/msys64/mingw64/lib/clang/20/lib/windows] ==> [D:/msys64/mingw64/lib/clang/20/lib/windows]
         implicit libs: [mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;kernel32]
         implicit objs: [D:/msys64/mingw64/lib/crt2.o;D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o;D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
-        implicit dirs: [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/19/lib/windows]
+        implicit dirs: [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/20/lib/windows]
         implicit fwks: []
       
       
@@ -228,38 +229,39 @@ events:
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10"
-      binary: "C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10"
+      source: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut"
+      binary: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      VCPKG_INSTALLED_DIR: "C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed"
+      VCPKG_HOST_TRIPLET: "x64-mingw-dynamic"
+      VCPKG_INSTALLED_DIR: "E:/.vcpkg-clion/vcpkg1/installed"
       VCPKG_PREFER_SYSTEM_LIBS: "OFF"
-      VCPKG_TARGET_TRIPLET: "x64-windows"
-      Z_VCPKG_ROOT_DIR: "C:/Users/Administrator/.vcpkg-clion/vcpkg1"
+      VCPKG_TARGET_TRIPLET: "x64-mingw-dynamic"
+      Z_VCPKG_ROOT_DIR: "E:/.vcpkg-clion/vcpkg1"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10'
+        Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut'
         
-        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_1e957/fast
-        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1e957.dir\\build.make CMakeFiles/cmTC_1e957.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10'
-        Building CXX object CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj
-        D:\\msys64\\mingw64\\bin\\clang++.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_1e957.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles\\cmTC_1e957.dir\\CMakeCXXCompilerABI.cpp.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
-        clang version 19.1.4
+        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_ec7e9/fast
+        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ec7e9.dir\\build.make CMakeFiles/cmTC_ec7e9.dir/build
+        mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut'
+        Building CXX object CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj
+        D:\\msys64\\mingw64\\bin\\clang++.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_ec7e9.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles\\cmTC_ec7e9.dir\\CMakeCXXCompilerABI.cpp.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"
+        clang version 20.1.3
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: D:/msys64/mingw64/bin
          (in-process)
-         "D:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10 -v -fcoverage-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10 -resource-dir D:/msys64/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_1e957.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++ -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/backward -internal-isystem D:/msys64/mingw64/lib/clang/19/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_1e957.dir\\\\CMakeCXXCompilerABI.cpp.obj" -x c++ "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCXXCompilerABI.cpp"
-        clang -cc1 version 19.1.4 based upon LLVM 19.1.4 default target x86_64-w64-windows-gnu
+         "D:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut -v -fcoverage-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut -resource-dir D:/msys64/mingw64/lib/clang/20 -dependency-file "CMakeFiles\\\\cmTC_ec7e9.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++ -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/backward -internal-isystem D:/msys64/mingw64/lib/clang/20/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_ec7e9.dir\\\\CMakeCXXCompilerABI.cpp.obj" -x c++ "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCXXCompilerABI.cpp"
+        clang -cc1 version 20.1.3 based upon LLVM 20.1.3 default target x86_64-w64-windows-gnu
         ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++"
         ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32"
         ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward"
@@ -285,20 +287,20 @@ events:
          D:/msys64/mingw64/include/c++/14.2.0
          D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32
          D:/msys64/mingw64/include/c++/14.2.0/backward
-         D:/msys64/mingw64/lib/clang/19/include
+         D:/msys64/mingw64/lib/clang/20/include
          D:/msys64/mingw64/include
         End of search list.
-        Linking CXX executable cmTC_1e957.exe
-        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1e957.dir\\link.txt --verbose=1
-        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_1e957.dir/objects.a
-        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_1e957.dir/objects.a @CMakeFiles\\cmTC_1e957.dir\\objects1.rsp
-        D:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_1e957.dir/objects.a -Wl,--no-whole-archive -o cmTC_1e957.exe -Wl,--out-implib,libcmTC_1e957.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
-        clang version 19.1.4
+        Linking CXX executable cmTC_ec7e9.exe
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ec7e9.dir\\link.txt --verbose=1
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ec7e9.dir/objects.a
+        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_ec7e9.dir/objects.a @CMakeFiles\\cmTC_ec7e9.dir\\objects1.rsp
+        D:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_ec7e9.dir/objects.a -Wl,--no-whole-archive -o cmTC_ec7e9.exe -Wl,--out-implib,libcmTC_ec7e9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        clang version 20.1.3
         Target: x86_64-w64-windows-gnu
         Thread model: posix
         InstalledDir: D:/msys64/mingw64/bin
-         "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_1e957.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/19/lib/windows --whole-archive "CMakeFiles\\\\cmTC_1e957.dir/objects.a" --no-whole-archive --out-implib libcmTC_1e957.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
-        mingw32-make[1]: Leaving directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10'
+         "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_ec7e9.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/20/lib/windows --whole-archive "CMakeFiles\\\\cmTC_ec7e9.dir/objects.a" --no-whole-archive --out-implib libcmTC_ec7e9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o
+        mingw32-make[1]: Leaving directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut'
         
       exitCode: 0
   -
@@ -306,7 +308,7 @@ events:
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -314,15 +316,15 @@ events:
           add: [D:/msys64/mingw64/include/c++/14.2.0]
           add: [D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32]
           add: [D:/msys64/mingw64/include/c++/14.2.0/backward]
-          add: [D:/msys64/mingw64/lib/clang/19/include]
+          add: [D:/msys64/mingw64/lib/clang/20/include]
           add: [D:/msys64/mingw64/include]
         end of search list found
         collapse include dir [D:/msys64/mingw64/include/c++/14.2.0] ==> [D:/msys64/mingw64/include/c++/14.2.0]
         collapse include dir [D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32] ==> [D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32]
         collapse include dir [D:/msys64/mingw64/include/c++/14.2.0/backward] ==> [D:/msys64/mingw64/include/c++/14.2.0/backward]
-        collapse include dir [D:/msys64/mingw64/lib/clang/19/include] ==> [D:/msys64/mingw64/lib/clang/19/include]
+        collapse include dir [D:/msys64/mingw64/lib/clang/20/include] ==> [D:/msys64/mingw64/lib/clang/20/include]
         collapse include dir [D:/msys64/mingw64/include] ==> [D:/msys64/mingw64/include]
-        implicit include dirs: [D:/msys64/mingw64/include/c++/14.2.0;D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32;D:/msys64/mingw64/include/c++/14.2.0/backward;D:/msys64/mingw64/lib/clang/19/include;D:/msys64/mingw64/include]
+        implicit include dirs: [D:/msys64/mingw64/include/c++/14.2.0;D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32;D:/msys64/mingw64/include/c++/14.2.0/backward;D:/msys64/mingw64/lib/clang/20/include;D:/msys64/mingw64/include]
       
       
   -
@@ -330,24 +332,24 @@ events:
     backtrace:
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
       - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:14 (project)"
+      - "CMakeLists.txt:8 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.lld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10']
+        ignore line: [Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut']
         ignore line: []
-        ignore line: [Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_1e957/fast]
-        ignore line: [D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_1e957.dir\\build.make CMakeFiles/cmTC_1e957.dir/build]
-        ignore line: [mingw32-make[1]: Entering directory 'C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10']
-        ignore line: [Building CXX object CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [D:\\msys64\\mingw64\\bin\\clang++.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_1e957.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles\\cmTC_1e957.dir\\CMakeCXXCompilerABI.cpp.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"]
-        ignore line: [clang version 19.1.4]
+        ignore line: [Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_ec7e9/fast]
+        ignore line: [D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ec7e9.dir\\build.make CMakeFiles/cmTC_ec7e9.dir/build]
+        ignore line: [mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut']
+        ignore line: [Building CXX object CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [D:\\msys64\\mingw64\\bin\\clang++.exe   -fcolor-diagnostics   -v -MD -MT CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_ec7e9.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles\\cmTC_ec7e9.dir\\CMakeCXXCompilerABI.cpp.obj -c "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\share\\cmake-3.27\\Modules\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [clang version 20.1.3]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: D:/msys64/mingw64/bin]
         ignore line: [ (in-process)]
-        ignore line: [ "D:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10 -v -fcoverage-compilation-dir=C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-cbip10 -resource-dir D:/msys64/mingw64/lib/clang/19 -dependency-file "CMakeFiles\\\\cmTC_1e957.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_1e957.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++ -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/backward -internal-isystem D:/msys64/mingw64/lib/clang/19/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_1e957.dir\\\\CMakeCXXCompilerABI.cpp.obj" -x c++ "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCXXCompilerABI.cpp"]
-        ignore line: [clang -cc1 version 19.1.4 based upon LLVM 19.1.4 default target x86_64-w64-windows-gnu]
+        ignore line: [ "D:/msys64/mingw64/bin/clang++.exe" -cc1 -triple x86_64-w64-windows-gnu -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=none -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -mms-bitfields -funwind-tables=2 -fno-sized-deallocation -fno-use-init-array -target-cpu x86-64 -tune-cpu generic -debugger-tuning=gdb -fdebug-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut -v -fcoverage-compilation-dir=D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-y1o7ut -resource-dir D:/msys64/mingw64/lib/clang/20 -dependency-file "CMakeFiles\\\\cmTC_ec7e9.dir\\\\CMakeCXXCompilerABI.cpp.obj.d" -MT CMakeFiles/cmTC_ec7e9.dir/CMakeCXXCompilerABI.cpp.obj -sys-header-deps -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++ -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/include/c++/14.2.0 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/include/c++/14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++ -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2.0/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14.2/backward -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/x86_64-w64-mingw32 -internal-isystem D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/g++-v14/backward -internal-isystem D:/msys64/mingw64/lib/clang/20/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/include -internal-isystem D:/msys64/mingw64/x86_64-w64-mingw32/usr/include -internal-isystem D:/msys64/mingw64/include -fdeprecated-macro -ferror-limit 19 -femulated-tls -fno-use-cxa-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -exception-model=seh -fcolor-diagnostics -faddrsig -o "CMakeFiles\\\\cmTC_ec7e9.dir\\\\CMakeCXXCompilerABI.cpp.obj" -x c++ "E:\\\\application\\\\CLion 2023.3.2\\\\bin\\\\cmake\\\\win\\\\x64\\\\share\\\\cmake-3.27\\\\Modules\\\\CMakeCXXCompilerABI.cpp"]
+        ignore line: [clang -cc1 version 20.1.3 based upon LLVM 20.1.3 default target x86_64-w64-windows-gnu]
         ignore line: [ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++"]
         ignore line: [ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/x86_64-w64-mingw32"]
         ignore line: [ignoring nonexistent directory "D:/msys64/mingw64/x86_64-w64-mingw32/include/c++/backward"]
@@ -373,37 +375,37 @@ events:
         ignore line: [ D:/msys64/mingw64/include/c++/14.2.0]
         ignore line: [ D:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32]
         ignore line: [ D:/msys64/mingw64/include/c++/14.2.0/backward]
-        ignore line: [ D:/msys64/mingw64/lib/clang/19/include]
+        ignore line: [ D:/msys64/mingw64/lib/clang/20/include]
         ignore line: [ D:/msys64/mingw64/include]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_1e957.exe]
-        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_1e957.dir\\link.txt --verbose=1]
-        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_1e957.dir/objects.a]
-        ignore line: [D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_1e957.dir/objects.a @CMakeFiles\\cmTC_1e957.dir\\objects1.rsp]
-        ignore line: [D:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_1e957.dir/objects.a -Wl --no-whole-archive -o cmTC_1e957.exe -Wl --out-implib libcmTC_1e957.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
-        ignore line: [clang version 19.1.4]
+        ignore line: [Linking CXX executable cmTC_ec7e9.exe]
+        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ec7e9.dir\\link.txt --verbose=1]
+        ignore line: ["E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ec7e9.dir/objects.a]
+        ignore line: [D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_ec7e9.dir/objects.a @CMakeFiles\\cmTC_ec7e9.dir\\objects1.rsp]
+        ignore line: [D:\\msys64\\mingw64\\bin\\clang++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_ec7e9.dir/objects.a -Wl --no-whole-archive -o cmTC_ec7e9.exe -Wl --out-implib libcmTC_ec7e9.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [clang version 20.1.3]
         ignore line: [Target: x86_64-w64-windows-gnu]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: D:/msys64/mingw64/bin]
-        link line: [ "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_1e957.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/19/lib/windows --whole-archive "CMakeFiles\\\\cmTC_1e957.dir/objects.a" --no-whole-archive --out-implib libcmTC_1e957.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
+        link line: [ "D:/msys64/mingw64/bin/ld" -m i386pep -Bdynamic -o cmTC_ec7e9.exe D:/msys64/mingw64/lib/crt2.o D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o -LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0 -LD:/msys64/mingw64/x86_64-w64-mingw32/lib -LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib -LD:/msys64/mingw64/lib -LD:/msys64/mingw64/lib/clang/20/lib/windows --whole-archive "CMakeFiles\\\\cmTC_ec7e9.dir/objects.a" --no-whole-archive --out-implib libcmTC_ec7e9.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
           arg [D:/msys64/mingw64/bin/ld] ==> ignore
           arg [-m] ==> ignore
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_1e957.exe] ==> ignore
+          arg [cmTC_ec7e9.exe] ==> ignore
           arg [D:/msys64/mingw64/lib/crt2.o] ==> obj [D:/msys64/mingw64/lib/crt2.o]
           arg [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o] ==> obj [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o]
           arg [-LD:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0] ==> dir [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0]
           arg [-LD:/msys64/mingw64/x86_64-w64-mingw32/lib] ==> dir [D:/msys64/mingw64/x86_64-w64-mingw32/lib]
           arg [-LD:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib] ==> dir [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib]
           arg [-LD:/msys64/mingw64/lib] ==> dir [D:/msys64/mingw64/lib]
-          arg [-LD:/msys64/mingw64/lib/clang/19/lib/windows] ==> dir [D:/msys64/mingw64/lib/clang/19/lib/windows]
+          arg [-LD:/msys64/mingw64/lib/clang/20/lib/windows] ==> dir [D:/msys64/mingw64/lib/clang/20/lib/windows]
           arg [--whole-archive] ==> ignore
-          arg [CMakeFiles\\\\cmTC_1e957.dir/objects.a] ==> ignore
+          arg [CMakeFiles\\\\cmTC_ec7e9.dir/objects.a] ==> ignore
           arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_1e957.dll.a] ==> ignore
+          arg [libcmTC_ec7e9.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -434,11 +436,158 @@ events:
         collapse library dir [D:/msys64/mingw64/x86_64-w64-mingw32/lib] ==> [D:/msys64/mingw64/x86_64-w64-mingw32/lib]
         collapse library dir [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib] ==> [D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib]
         collapse library dir [D:/msys64/mingw64/lib] ==> [D:/msys64/mingw64/lib]
-        collapse library dir [D:/msys64/mingw64/lib/clang/19/lib/windows] ==> [D:/msys64/mingw64/lib/clang/19/lib/windows]
+        collapse library dir [D:/msys64/mingw64/lib/clang/20/lib/windows] ==> [D:/msys64/mingw64/lib/clang/20/lib/windows]
         implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
         implicit objs: [D:/msys64/mingw64/lib/crt2.o;D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtbegin.o;D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/crtend.o]
-        implicit dirs: [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/19/lib/windows]
+        implicit dirs: [D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/20/lib/windows]
         implicit fwks: []
       
       
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/trantor/TrantorConfig.cmake:48 (find_dependency)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/DrogonConfig.cmake:40 (find_dependency)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:35 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ddcl1e"
+      binary: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ddcl1e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -fuse-ld=lld -static-libgcc -static-libstdc++"
+      CMAKE_MODULE_PATH: "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/trantor"
+      VCPKG_HOST_TRIPLET: "x64-mingw-dynamic"
+      VCPKG_INSTALLED_DIR: "E:/.vcpkg-clion/vcpkg1/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-mingw-dynamic"
+      Z_VCPKG_ROOT_DIR: "E:/.vcpkg-clion/vcpkg1"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ddcl1e'
+        
+        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a7e60/fast
+        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a7e60.dir\\build.make CMakeFiles/cmTC_a7e60.dir/build
+        mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ddcl1e'
+        Building C object CMakeFiles/cmTC_a7e60.dir/src.c.obj
+        D:\\msys64\\mingw64\\bin\\clang.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_a7e60.dir/src.c.obj -MF CMakeFiles\\cmTC_a7e60.dir\\src.c.obj.d -o CMakeFiles\\cmTC_a7e60.dir\\src.c.obj -c D:\\CLionProjects\\cadd\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-ddcl1e\\src.c
+        Linking C executable cmTC_a7e60.exe
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_a7e60.dir\\link.txt --verbose=1
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_a7e60.dir/objects.a
+        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_a7e60.dir/objects.a @CMakeFiles\\cmTC_a7e60.dir\\objects1.rsp
+        D:\\msys64\\mingw64\\bin\\clang.exe  -fuse-ld=lld -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_a7e60.dir/objects.a -Wl,--no-whole-archive -o cmTC_a7e60.exe -Wl,--out-implib,libcmTC_a7e60.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_a7e60.dir\\linkLibs.rsp
+        clang: warning: argument unused during compilation: '-static-libstdc++' [-Wunused-command-line-argument]
+        mingw32-make[1]: Leaving directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ddcl1e'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake:89 (try_compile)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/FindFilesystem.cmake:162 (check_include_file_cxx)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/DrogonConfig.cmake:70 (find_dependency)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:35 (find_package)"
+    checks:
+      - "Looking for C++ include filesystem"
+    directories:
+      source: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwpqow"
+      binary: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwpqow"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -stdlib=libstdc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -fuse-ld=lld -static-libgcc -static-libstdc++"
+      CMAKE_MODULE_PATH: "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/trantor"
+      VCPKG_HOST_TRIPLET: "x64-mingw-dynamic"
+      VCPKG_INSTALLED_DIR: "E:/.vcpkg-clion/vcpkg1/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-mingw-dynamic"
+      Z_VCPKG_ROOT_DIR: "E:/.vcpkg-clion/vcpkg1"
+    buildResult:
+      variable: "_CXX_FILESYSTEM_HAVE_HEADER"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwpqow'
+        
+        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_4a69c/fast
+        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4a69c.dir\\build.make CMakeFiles/cmTC_4a69c.dir/build
+        mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwpqow'
+        Building CXX object CMakeFiles/cmTC_4a69c.dir/CheckIncludeFile.cxx.obj
+        D:\\msys64\\mingw64\\bin\\clang++.exe   -stdlib=libstdc++  -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_4a69c.dir/CheckIncludeFile.cxx.obj -MF CMakeFiles\\cmTC_4a69c.dir\\CheckIncludeFile.cxx.obj.d -o CMakeFiles\\cmTC_4a69c.dir\\CheckIncludeFile.cxx.obj -c D:\\CLionProjects\\cadd\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-vwpqow\\CheckIncludeFile.cxx
+        Linking CXX executable cmTC_4a69c.exe
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4a69c.dir\\link.txt --verbose=1
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4a69c.dir/objects.a
+        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_4a69c.dir/objects.a @CMakeFiles\\cmTC_4a69c.dir\\objects1.rsp
+        D:\\msys64\\mingw64\\bin\\clang++.exe  -stdlib=libstdc++   -fuse-ld=lld -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_4a69c.dir/objects.a -Wl,--no-whole-archive -o cmTC_4a69c.exe -Wl,--out-implib,libcmTC_4a69c.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_4a69c.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-vwpqow'
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/FindFilesystem.cmake:126 (check_cxx_source_runs)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/FindFilesystem.cmake:220 (_cmcm_check_cxx_source)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "E:/application/CLion 2023.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon/DrogonConfig.cmake:70 (find_dependency)"
+      - "E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
+      - "CMakeLists.txt:35 (find_package)"
+    checks:
+      - "Performing Test CXX_FILESYSTEM_NO_LINK_NEEDED"
+    directories:
+      source: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l9278r"
+      binary: "D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l9278r"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -stdlib=libstdc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: " -fuse-ld=lld -static-libgcc -static-libstdc++"
+      CMAKE_MODULE_PATH: "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/drogon;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/share/trantor"
+      VCPKG_HOST_TRIPLET: "x64-mingw-dynamic"
+      VCPKG_INSTALLED_DIR: "E:/.vcpkg-clion/vcpkg1/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-mingw-dynamic"
+      Z_VCPKG_ROOT_DIR: "E:/.vcpkg-clion/vcpkg1"
+    buildResult:
+      variable: "CXX_FILESYSTEM_NO_LINK_NEEDED_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l9278r'
+        
+        Run Build Command(s): "E:/application/CLion 2023.3.2/bin/cmake/win/x64/bin/cmake.exe" -E env VERBOSE=1 D:/msys64/mingw64/bin/mingw32-make.exe -f Makefile cmTC_3ee57/fast
+        D:/msys64/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3ee57.dir\\build.make CMakeFiles/cmTC_3ee57.dir/build
+        mingw32-make[1]: Entering directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l9278r'
+        Building CXX object CMakeFiles/cmTC_3ee57.dir/src.cxx.obj
+        D:\\msys64\\mingw64\\bin\\clang++.exe -DCXX_FILESYSTEM_NO_LINK_NEEDED  -stdlib=libstdc++ -std=c++17 -std=gnu++17 -fcolor-diagnostics -MD -MT CMakeFiles/cmTC_3ee57.dir/src.cxx.obj -MF CMakeFiles\\cmTC_3ee57.dir\\src.cxx.obj.d -o CMakeFiles\\cmTC_3ee57.dir\\src.cxx.obj -c D:\\CLionProjects\\cadd\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-l9278r\\src.cxx
+        Linking CXX executable cmTC_3ee57.exe
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3ee57.dir\\link.txt --verbose=1
+        "E:\\application\\CLion 2023.3.2\\bin\\cmake\\win\\x64\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_3ee57.dir/objects.a
+        D:\\msys64\\mingw64\\bin\\llvm-ar.exe qc CMakeFiles\\cmTC_3ee57.dir/objects.a @CMakeFiles\\cmTC_3ee57.dir\\objects1.rsp
+        D:\\msys64\\mingw64\\bin\\clang++.exe  -stdlib=libstdc++ -std=c++17  -fuse-ld=lld -static-libgcc -static-libstdc++  -Wl,--whole-archive CMakeFiles\\cmTC_3ee57.dir/objects.a -Wl,--no-whole-archive -o cmTC_3ee57.exe -Wl,--out-implib,libcmTC_3ee57.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_3ee57.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'D:/CLionProjects/cadd/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-l9278r'
+        
+      exitCode: 0
+    runResult:
+      variable: "CXX_FILESYSTEM_NO_LINK_NEEDED_EXITCODE"
+      cached: true
+      stdout: |
+        D:/CLionProjects/cadd/cmake-build-debug
+      stderr: |
+      exitCode: 0
 ...

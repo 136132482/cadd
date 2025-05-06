@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libCryptoUtilLib.a CMakeFiles/CryptoUtilLib.dir/util/ssl/CryptoUtil.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libCryptoUtilLib.a

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/CLionProjects/cadd/duotai.cpp" "CMakeFiles/template.dir/duotai.cpp.obj" "gcc" "CMakeFiles/template.dir/duotai.cpp.obj.d"
-  "C:/Users/Administrator/CLionProjects/cadd/template.cpp" "CMakeFiles/template.dir/template.cpp.obj" "gcc" "CMakeFiles/template.dir/template.cpp.obj.d"
+  "D:/CLionProjects/cadd/duotai.cpp" "CMakeFiles/template.dir/duotai.cpp.obj" "gcc" "CMakeFiles/template.dir/duotai.cpp.obj.d"
+  "D:/CLionProjects/cadd/template.cpp" "CMakeFiles/template.dir/template.cpp.obj" "gcc" "CMakeFiles/template.dir/template.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

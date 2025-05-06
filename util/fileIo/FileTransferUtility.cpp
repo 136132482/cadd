@@ -3,8 +3,8 @@
 #include <sstream>
 #include <iomanip>
 #include <chrono>
-#include <algorithm>  // for std::transform
-#include <cctype>     // for ::tolower
+#include <algorithm>
+#include <cctype>
 #include <filesystem>
 
 using namespace std;
@@ -12,62 +12,9 @@ using namespace std::filesystem;
 
 namespace fs = std::filesystem;
 
-// ThreadPool实现
-FileTransferUtility::ThreadPool::ThreadPool(size_t threads) : stop(false) {
+FileTransferUtility::FileTransferUtility() {}
 
-    for(size_t i = 0; i < threads; ++i) {
-        workers.emplace_back([this] {
-            while(true) {
-                function<void()> task;
-                {
-                    unique_lock<mutex> lock(queueMutex);
-                    condition.wait(lock, [this]{ return stop || !tasks.empty(); });
-                    if(stop && tasks.empty()) return;
-                    task = std::move(tasks.front());
-                    tasks.pop();
-                }
-                task();
-            }
-        });
-    }
-}
-
-template<class F, class... Args>
-auto FileTransferUtility::ThreadPool::enqueue(F&& f, Args&&... args)
--> future<typename result_of<F(Args...)>::type> {
-    using return_type = typename result_of<F(Args...)>::type;
-
-    auto task = make_shared<packaged_task<return_type()>>(
-            bind(std::forward<F>(f), forward<Args>(args)...)
-    );
-
-    future<return_type> res = task->get_future();
-    {
-        lock_guard<mutex> lock(queueMutex);
-        if(stop) throw runtime_error("enqueue on stopped ThreadPool");
-        tasks.emplace([task](){ (*task)(); });
-    }
-    condition.notify_one();
-    return res;
-}
-
-FileTransferUtility::ThreadPool::~ThreadPool() {
-    {
-        lock_guard<mutex> lock(queueMutex);
-        stop = true;
-    }
-    condition.notify_all();
-    for(thread &worker: workers)
-        worker.join();
-}
-
-// FileTransferUtility实现
-FileTransferUtility::FileTransferUtility()
-        : threadPool(make_unique<ThreadPool>(thread::hardware_concurrency())) {}
-
-FileTransferUtility::~FileTransferUtility() {
-    cancelAllTransfers();
-}
+FileTransferUtility::~FileTransferUtility() {}
 
 FileTransferUtility::FileType FileTransferUtility::getFileType(const string& filePath) {
     string ext = getFileExtension(filePath);
@@ -110,250 +57,108 @@ uint64_t FileTransferUtility::getRemoteFileSize(const string& url) {
 
 bool FileTransferUtility::uploadFile(const string& localPath, const string& remoteUrl,
                                      bool resume, ProgressCallback progressCb) {
-    if(!exists(localPath)) return false;
-
-    auto task = make_shared<TransferTask>();
-    task->identifier = localPath;
-    task->sourcePath = localPath;
-    task->targetPath = remoteUrl;
-    task->isUpload = true;
-    task->resumeEnabled = resume && isResumeSupported(remoteUrl);
-    task->totalBytes = getFileSize(localPath);
-    task->transferredBytes = 0;
-    task->state = TransferState::READY;
-    task->paused = false;
-    task->cancelled = false;
-    task->progressCallback = std::move(progressCb);
-
-    {
-        lock_guard<mutex> lock(tasksMutex);
-        activeTasks[localPath] = task;
+    if(!exists(localPath)) {
+        Logger::Global().Error("Local file does not exist: " + localPath);
+        return false;
     }
 
-    executeTransferTask(task);
-    return true;
+    TransferTask task;
+    task.identifier = localPath;
+    task.sourcePath = localPath;
+    task.targetPath = remoteUrl;
+    task.isUpload = true;
+    task.resumeEnabled = resume && isResumeSupported(remoteUrl);
+    task.totalBytes = getFileSize(localPath);
+    task.transferredBytes = 0;
+    task.state = TransferState::RUNNING;
+    task.paused = false;
+    task.cancelled = false;
+    task.progressCallback = std::move(progressCb);
+
+    return doUpload(task);
 }
 
 bool FileTransferUtility::downloadFile(const string& remoteUrl, const string& localPath,
                                        bool resume, ProgressCallback progressCb) {
-    auto task = make_shared<TransferTask>();
-    task->identifier = remoteUrl;
-    task->sourcePath = remoteUrl;
-    task->targetPath = localPath;
-    task->isUpload = false;
-    task->resumeEnabled = resume && isResumeSupported(remoteUrl);
-    task->totalBytes = getRemoteFileSize(remoteUrl);
-    task->transferredBytes = 0;
-    task->state = TransferState::READY;
-    task->paused = false;
-    task->cancelled = false;
-    task->progressCallback = std::move(progressCb);
+    TransferTask task;
+    task.identifier = remoteUrl;
+    task.sourcePath = remoteUrl;
+    task.targetPath = localPath;
+    task.isUpload = false;
+    task.resumeEnabled = resume && isResumeSupported(remoteUrl);
+    task.totalBytes = getRemoteFileSize(remoteUrl);
+    task.transferredBytes = 0;
+    task.state = TransferState::RUNNING;
+    task.paused = false;
+    task.cancelled = false;
+    task.progressCallback = std::move(progressCb);
 
-    {
-        lock_guard<mutex> lock(tasksMutex);
-        activeTasks[remoteUrl] = task;
-    }
-
-    executeTransferTask(task);
-    return true;
+    return doDownload(task);
 }
 
 void FileTransferUtility::batchUpload(const vector<pair<string, string>>& filePairs,
-                                      int maxThreads, bool resume,
-                                      ProgressCallback progressCb, StateCallback stateCb) {
-    auto pool = make_unique<ThreadPool>(maxThreads);
-    vector<future<bool>> futures;
-
+                                      bool resume,
+                                      ProgressCallback progressCb,
+                                      StateCallback stateCb) {
     for(const auto& pair : filePairs) {
-        futures.emplace_back(pool->enqueue([this, pair, resume, progressCb, stateCb]() {
-            auto task = make_shared<TransferTask>();
-            task->identifier = pair.first;
-            task->sourcePath = pair.first;
-            task->targetPath = pair.second;
-            task->isUpload = true;
-            task->resumeEnabled = resume && isResumeSupported(pair.second);
-            task->totalBytes = getFileSize(pair.first);
-            task->transferredBytes = 0;
-            task->state = TransferState::READY;
-            task->paused = false;
-            task->cancelled = false;
-            task->progressCallback = progressCb;
+        TransferTask task;
+        task.identifier = pair.first;
+        task.sourcePath = pair.first;
+        task.targetPath = pair.second;
+        task.isUpload = true;
+        task.resumeEnabled = resume && isResumeSupported(pair.second);
+        task.totalBytes = getFileSize(pair.first);
+        task.transferredBytes = 0;
+        task.state = TransferState::RUNNING;
+        task.paused = false;
+        task.cancelled = false;
+        task.progressCallback = progressCb;
+        task.stateCallback = stateCb;
 
-            if(stateCb) {
-                task->stateCallback = [stateCb, identifier = task->identifier](const string&, TransferState state) {
-                    stateCb(identifier, state);
-                };
-            }
+        if(stateCb) {
+            stateCb(pair.first, TransferState::RUNNING);
+        }
 
-            {
-                lock_guard<mutex> lock(tasksMutex);
-                activeTasks[pair.first] = task;
-            }
+        bool success = doUpload(task);
 
-            executeTransferTask(task);
-            return task->state == TransferState::COMPLETED;
-        }));
-    }
-
-    // 等待所有任务完成
-    for(auto& f : futures) {
-        f.get();
+        if(stateCb) {
+            stateCb(pair.first, success ? TransferState::COMPLETED : TransferState::FAILED);
+        }
     }
 }
 
 void FileTransferUtility::batchDownload(const vector<pair<string, string>>& urlPairs,
-                                        int maxThreads, bool resume,
-                                        ProgressCallback progressCb, StateCallback stateCb) {
-    auto pool = make_unique<ThreadPool>(maxThreads);
-    vector<future<bool>> futures;
-
+                                        bool resume,
+                                        ProgressCallback progressCb,
+                                        StateCallback stateCb) {
     for(const auto& pair : urlPairs) {
-        futures.emplace_back(pool->enqueue([this, pair, resume, progressCb, stateCb]() {
-            auto task = make_shared<TransferTask>();
-            task->identifier = pair.first;
-            task->sourcePath = pair.first;
-            task->targetPath = pair.second;
-            task->isUpload = false;
-            task->resumeEnabled = resume && isResumeSupported(pair.first);
-            task->totalBytes = getRemoteFileSize(pair.first);
-            task->transferredBytes = 0;
-            task->state = TransferState::READY;
-            task->paused = false;
-            task->cancelled = false;
-            task->progressCallback = progressCb;
+        TransferTask task;
+        task.identifier = pair.first;
+        task.sourcePath = pair.first;
+        task.targetPath = pair.second;
+        task.isUpload = false;
+        task.resumeEnabled = resume && isResumeSupported(pair.first);
+        task.totalBytes = getRemoteFileSize(pair.first);
+        task.transferredBytes = 0;
+        task.state = TransferState::RUNNING;
+        task.paused = false;
+        task.cancelled = false;
+        task.progressCallback = progressCb;
+        task.stateCallback = stateCb;
 
-            if(stateCb) {
-                task->stateCallback = [stateCb, identifier = task->identifier](const string&, TransferState state) {
-                    stateCb(identifier, state);
-                };
-            }
+        if(stateCb) {
+            stateCb(pair.first, TransferState::RUNNING);
+        }
 
-            {
-                lock_guard<mutex> lock(tasksMutex);
-                activeTasks[pair.first] = task;
-            }
+        bool success = doDownload(task);
 
-            executeTransferTask(task);
-            return task->state == TransferState::COMPLETED;
-        }));
-    }
-
-    // 等待所有任务完成
-    for(auto& f : futures) {
-        f.get();
-    }
-}
-
-void FileTransferUtility::pauseTransfer(const string& fileIdentifier) {
-    lock_guard<mutex> lock(tasksMutex);
-    auto it = activeTasks.find(fileIdentifier);
-    if(it != activeTasks.end()) {
-        it->second->paused = true;
-        it->second->state = TransferState::PAUSED;
-
-        if(it->second->stateCallback) {
-            it->second->stateCallback(it->second->identifier, TransferState::PAUSED);
+        if(stateCb) {
+            stateCb(pair.first, success ? TransferState::COMPLETED : TransferState::FAILED);
         }
     }
-}
-
-void FileTransferUtility::resumeTransfer(const string& fileIdentifier) {
-    lock_guard<mutex> lock(tasksMutex);
-    auto it = activeTasks.find(fileIdentifier);
-    if(it != activeTasks.end() && it->second->state == TransferState::PAUSED) {
-        it->second->paused = false;
-        it->second->state = TransferState::READY;
-
-        if(it->second->stateCallback) {
-            it->second->stateCallback(it->second->identifier, TransferState::READY);
-        }
-
-        executeTransferTask(it->second);
-    }
-}
-
-void FileTransferUtility::cancelTransfer(const string& fileIdentifier) {
-    lock_guard<mutex> lock(tasksMutex);
-    auto it = activeTasks.find(fileIdentifier);
-    if(it != activeTasks.end()) {
-        it->second->cancelled = true;
-        it->second->state = TransferState::CANCELLED;
-
-        if(it->second->stateCallback) {
-            it->second->stateCallback(it->second->identifier, TransferState::CANCELLED);
-        }
-
-        activeTasks.erase(it);
-    }
-}
-
-void FileTransferUtility::cancelAllTransfers() {
-    lock_guard<mutex> lock(tasksMutex);
-    for(auto& pair : activeTasks) {
-        pair.second->cancelled = true;
-        pair.second->state = TransferState::CANCELLED;
-
-        if(pair.second->stateCallback) {
-            pair.second->stateCallback(pair.second->identifier, TransferState::CANCELLED);
-        }
-    }
-    activeTasks.clear();
-}
-
-FileTransferUtility::TransferState FileTransferUtility::getTransferState(const string& fileIdentifier) const {
-    lock_guard<mutex> lock(tasksMutex);
-    auto it = activeTasks.find(fileIdentifier);
-    return it != activeTasks.end() ? it->second->state.load() : TransferState::FAILED;
-}
-
-map<string, FileTransferUtility::TransferState> FileTransferUtility::getAllTransferStates() const {
-    map<string, TransferState> states;
-    lock_guard<mutex> lock(tasksMutex);
-    for(const auto& pair : activeTasks) {
-        states[pair.first] = pair.second->state.load();
-    }
-    return states;
-}
-
-void FileTransferUtility::executeTransferTask(shared_ptr<TransferTask> task) {
-    task->workerThread = make_shared<thread>([this, task]() {
-        task->state = TransferState::RUNNING;
-
-        if(task->stateCallback) {
-            task->stateCallback(task->identifier, TransferState::RUNNING);
-        }
-
-        bool success = false;
-        if(task->isUpload) {
-            success = doUpload(*task);
-        } else {
-            success = doDownload(*task);
-        }
-
-        if(task->cancelled) {
-            task->state = TransferState::CANCELLED;
-        } else if(success) {
-            task->state = TransferState::COMPLETED;
-        } else {
-            task->state = TransferState::FAILED;
-        }
-
-        if(task->stateCallback) {
-            task->stateCallback(task->identifier, task->state.load());
-        }
-
-        // 从活动任务中移除
-        if(task->state != TransferState::PAUSED) {
-            lock_guard<mutex> lock(tasksMutex);
-            activeTasks.erase(task->identifier);
-        }
-    });
 }
 
 bool FileTransferUtility::doUpload(TransferTask& task) {
-    // 实际实现需要根据上传API调整
-    // 这里使用CURL模拟上传过程
-
     CURL* curl = curl_easy_init();
     if (!curl) {
         Logger::Global().Error("Failed to initialize CURL for upload: " + task.sourcePath);
@@ -367,7 +172,7 @@ bool FileTransferUtility::doUpload(TransferTask& task) {
     if (task.resumeEnabled) {
         string resumeInfoPath = generateResumeInfoPath(task.sourcePath);
         if (loadResumeInfo(resumeInfoPath, resumePosition)) {
-            Logger::Global().Debug("Resuming upload from position: " + std::to_string(resumePosition));
+            Logger::Global().Debug("Resuming upload from position: " + to_string(resumePosition));
         }
     }
 
@@ -398,7 +203,7 @@ bool FileTransferUtility::doUpload(TransferTask& task) {
     // 执行上传
     CURLcode res = curl_easy_perform(curl);
     if (res != CURLE_OK) {
-        Logger::Global().Error("Upload failed (" + std::string(curl_easy_strerror(res)) + "): " + task.sourcePath);
+        Logger::Global().Error("Upload failed (" + string(curl_easy_strerror(res)) + "): " + task.sourcePath);
     } else {
         Logger::Global().Info("Upload completed: " + task.sourcePath);
     }
@@ -415,42 +220,25 @@ bool FileTransferUtility::doUpload(TransferTask& task) {
 }
 
 bool FileTransferUtility::doDownload(TransferTask& task) {
-
     CURL* curl = curl_easy_init();
     if (!curl) {
-        Logger::Global().Error("Failed to initialize CURL for resume check");
+        Logger::Global().Error("Failed to initialize CURL for download: " + task.sourcePath);
         return false;
     }
+
     Logger::Global().Info("Starting download: " + task.sourcePath + " -> " + task.targetPath);
 
-    // 检查是否需要断点续传
+    // 检查断点续传
     uint64_t resumePosition = 0;
     string tempFilePath = generateTempFilePath(task.targetPath);
 
-    // 检查生成的临时文件路径是否为空
-    if (tempFilePath.empty()) {
-        Logger::Global().Error("Generated temporary file path is empty!");
-        curl_easy_cleanup(curl);
-        return false;
-    }
-
-    // 打印临时文件路径以确认
-    Logger::Global().Info("Generated temporary file path: " + tempFilePath);
-
-    // 检查路径是否合法
-    try {
-        fs::path tempPath(tempFilePath);
-        if (tempPath.empty()) {
-            throw std::runtime_error("Generated path is empty!");
+    if (task.resumeEnabled && fs::exists(tempFilePath)) {
+        try {
+            resumePosition = fs::file_size(tempFilePath);
+            Logger::Global().Debug("Found partial file, resuming from: " + to_string(resumePosition));
+        } catch (const fs::filesystem_error& e) {
+            Logger::Global().Error("Failed to get partial file size: " + string(e.what()));
         }
-        fs::path tempDir = tempPath.parent_path();
-        if (tempDir.empty()) {
-            throw std::runtime_error("Parent directory is empty!");
-        }
-    } catch (const std::exception& e) {
-        Logger::Global().Error("Invalid temp file path: " + tempFilePath + " | Error: " + e.what());
-        curl_easy_cleanup(curl);
-        return false;
     }
 
     // 确保目录存在
@@ -466,31 +254,9 @@ bool FileTransferUtility::doDownload(TransferTask& task) {
         }
     }
 
-    if (task.resumeEnabled && fs::exists(tempFilePath)) {
-        try {
-            resumePosition = fs::file_size(tempFilePath);
-            Logger::Global().Debug("Found partial file, resuming from: " + std::to_string(resumePosition));
-        } catch (const fs::filesystem_error& e) {
-            Logger::Global().Error("Failed to get partial file size: " + string(e.what()));
-        }
-    }
-    Logger::Global().Info("Temporary file path: " + tempFilePath);
-
-    // 打开文件并增加详细错误检查
     FILE* fp = fopen(tempFilePath.c_str(), resumePosition > 0 ? "ab" : "wb");
     if (!fp) {
-        DWORD error = GetLastError();
-        LPSTR errorMsg = nullptr;
-        FormatMessageA(
-                FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
-                nullptr, error, 0, (LPSTR)&errorMsg, 0, nullptr
-        );
-
-        Logger::Global().Error("Failed to open temp file: " + tempFilePath +
-                               " | Error: " + (errorMsg ? errorMsg : "Unknown") +
-                               " | GetLastError: " + std::to_string(error));
-
-        LocalFree(errorMsg);
+        Logger::Global().Error("Failed to open temp file: " + tempFilePath + " - " + strerror(errno));
         curl_easy_cleanup(curl);
         return false;
     }
@@ -513,7 +279,7 @@ bool FileTransferUtility::doDownload(TransferTask& task) {
     // 执行下载
     CURLcode res = curl_easy_perform(curl);
     if (res != CURLE_OK) {
-        Logger::Global().Error("Download failed (" + std::string(curl_easy_strerror(res)) + "): " + task.sourcePath);
+        Logger::Global().Error("Download failed (" + string(curl_easy_strerror(res)) + "): " + task.sourcePath);
     } else {
         Logger::Global().Info("Download completed: " + task.sourcePath);
     }
@@ -584,29 +350,15 @@ int FileTransferUtility::progressCallback(void* clientp, curl_off_t dltotal, cur
 }
 
 string FileTransferUtility::generateTempFilePath(const string& originalPath) {
-    if (originalPath.empty()) {
-        Logger::Global().Error("Original path is empty!");
-        return "";
-    }
-
     try {
         fs::path p(originalPath);
-        if (p.empty()) {
-            throw std::runtime_error("Constructed path is empty!");
-        }
-
-        // 如果 originalPath 不包含父目录，则使用默认临时目录
         if (p.parent_path().empty()) {
-            // 例如，使用系统临时目录
             fs::path tempDir = fs::temp_directory_path();
             return (tempDir / (p.stem().string() + "_part" + p.extension().string())).string();
         }
-
-        // 使用 "_part" 代替 ".part"
         fs::path tempPath = p.parent_path() / (p.stem().string() + "_part" + p.extension().string());
-        Logger::Global().Info("Generated temporary file path: " + tempPath.string());
         return tempPath.string();
-    } catch (const std::exception& e) {
+    } catch (const exception& e) {
         Logger::Global().Error("Failed to generate temp file path: " + string(e.what()));
         return "";
     }
@@ -639,13 +391,5 @@ bool FileTransferUtility::removeResumeInfo(const string& infoPath) {
 
 bool FileTransferUtility::isResumeSupported(const string& url) {
     Logger::Global().Debug("Checking resume support for: " + url);
-
-    CURL* curl = curl_easy_init();
-    if (!curl) {
-        Logger::Global().Debug("Failed to initialize CURL for resume check");
-        return false;
-    }
-
-    // 简单检查协议是否支持断点续传
     return url.find("http://") == 0 || url.find("https://") == 0 || url.find("ftp://") == 0;
 }

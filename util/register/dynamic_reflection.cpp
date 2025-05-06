@@ -308,61 +308,61 @@ public:
 
 
 
-//int main() {
-//    MyStruct obj;
-//    // # 静态反射部分：
-//    // 打印所有字段名称
-//    dyrefl::For<MyStruct>::for_each_propertie_name([](const char* name) {
-//        std::cout << "Field name: " << name << std::endl;
-//    });
-//
-//    // 打印所有字段值
-//    dyrefl::For<MyStruct>::for_each_propertie_value(obj, [](const char* name, auto&& value) {
-//        std::cout << "Field " << name << " has value: " << value << std::endl;
-//    });
-//
-//    // 打印所有函数名称
-//    dyrefl::For<MyStruct>::for_each_member_func_name([](const char* name) {
-//        std::cout << "Member func name: " << name << std::endl;
-//    });
-//
-//    // 获取特定成员的值，如果找不到成员，则返回默认值
-//    auto x_value = dyrefl::get_field_value(obj, "x");
-//    std::cout << "Field x has value: " << std::any_cast<int>(x_value) << std::endl;
-//
-//    auto y_value = dyrefl::get_field_value(obj, "y");
-//    std::cout << "Field y has value: " << std::any_cast<double>(y_value) << std::endl;
-//
-//    //修改值：
-//    dyrefl::assign_field_value(obj, "y", 33.33f);
-//    y_value = dyrefl::get_field_value(obj, "y");
-//    std::cout << "Field y has modifyed,new value is: " << std::any_cast<double>(y_value) << std::endl;
-//
-//    auto z_value = dyrefl::get_field_value(obj, "z"); // "z" 不存在
-//    if (z_value.type().name() == std::string_view("int")) {
-//        std::cout << "Field z has value: " << std::any_cast<int>(z_value) << std::endl;
-//    }
-//
-//    // 通过字符串调用成员函数 'print'
-//    auto print_ret = dyrefl::invoke_member_func_type_safe(obj, "print");
-//    std::cout << "print member return: " << std::any_cast<int>(print_ret) << std::endl;
-//
-//
-//    std::cout << "---------------------" << std::endl;
-//
-//    // 动态反射部分(动态反射完全不需要知道类型MyStruct的定义)：
-//    // 动态创建 MyStruct 实例并调用方法
-//    auto instance = dynamic::TypeRegistry::instance().create("MyStruct");
-//    if (instance) {
-//        std::cout << "Dynamic instance type: " << instance->get_type_name() << std::endl;
-//        // 这里可以调用 MyStruct 的成员方法
-//        auto x_value2 = instance->get_field_value_by_name("x");
-//        std::cout << "Field x has value: " << std::any_cast<int>(x_value2) << std::endl;
-//
-//        instance->invoke_member_func_by_name("print");
-//        instance->invoke_member_func_by_name("print_with_arg", 10);
-//        instance->invoke_member_func_by_name("print_with_arg", 20, 222);//这个调用会失败，命中断言，因为print_with_arg只接受一个函数
-//    }
-//    return 0;
-//}
+int main() {
+    MyStruct obj;
+    // # 静态反射部分：
+    // 打印所有字段名称
+    dyrefl::For<MyStruct>::for_each_propertie_name([](const char* name) {
+        std::cout << "Field name: " << name << std::endl;
+    });
+
+    // 打印所有字段值
+    dyrefl::For<MyStruct>::for_each_propertie_value(obj, [](const char* name, auto&& value) {
+        std::cout << "Field " << name << " has value: " << value << std::endl;
+    });
+
+    // 打印所有函数名称
+    dyrefl::For<MyStruct>::for_each_member_func_name([](const char* name) {
+        std::cout << "Member func name: " << name << std::endl;
+    });
+
+    // 获取特定成员的值，如果找不到成员，则返回默认值
+    auto x_value = dyrefl::get_field_value(obj, "x");
+    std::cout << "Field x has value: " << std::any_cast<int>(x_value) << std::endl;
+
+    auto y_value = dyrefl::get_field_value(obj, "y");
+    std::cout << "Field y has value: " << std::any_cast<double>(y_value) << std::endl;
+
+    //修改值：
+    dyrefl::assign_field_value(obj, "y", 33.33f);
+    y_value = dyrefl::get_field_value(obj, "y");
+    std::cout << "Field y has modifyed,new value is: " << std::any_cast<double>(y_value) << std::endl;
+
+    auto z_value = dyrefl::get_field_value(obj, "z"); // "z" 不存在
+    if (z_value.type().name() == std::string_view("int")) {
+        std::cout << "Field z has value: " << std::any_cast<int>(z_value) << std::endl;
+    }
+
+    // 通过字符串调用成员函数 'print'
+    auto print_ret = dyrefl::invoke_member_func_type_safe(obj, "print");
+    std::cout << "print member return: " << std::any_cast<int>(print_ret) << std::endl;
+
+
+    std::cout << "---------------------" << std::endl;
+
+    // 动态反射部分(动态反射完全不需要知道类型MyStruct的定义)：
+    // 动态创建 MyStruct 实例并调用方法
+    auto instance = dynamic::TypeRegistry::instance().create("MyStruct");
+    if (instance) {
+        std::cout << "Dynamic instance type: " << instance->get_type_name() << std::endl;
+        // 这里可以调用 MyStruct 的成员方法
+        auto x_value2 = instance->get_field_value_by_name("x");
+        std::cout << "Field x has value: " << std::any_cast<int>(x_value2) << std::endl;
+
+        instance->invoke_member_func_by_name("print");
+        instance->invoke_member_func_by_name("print_with_arg", 10);
+        instance->invoke_member_func_by_name("print_with_arg", 20, 222);//这个调用会失败，命中断言，因为print_with_arg只接受一个函数
+    }
+    return 0;
+}
 

@@ -364,33 +364,33 @@ int main(){
         std::cout << "Field name: " << name << std::endl;
     });
 
-
+//
 //    std::string json_str = R"({"name": "John", "age": 30, "is_student": false})";
-//    std::map<std::string, std::any> dataMap=comment->JsonDoDict<std::string,std::any>(json_str);
+//    std::map<std::string, std::any> dataMap=comment.JsonDoDict<std::string,std::any>(json_str);
 //
 //    std::string json_str1 = R"({"name": "张三", "age": "30", "is_student": "false"})";
-//    std::map<std::string, std::string> dataMap1=comment->JsonDoDict<std::string,std::string>(json_str1);
+//    std::map<std::string, std::string> dataMap1=comment.JsonDoDict<std::string,std::string>(json_str1);
 //
 //    std::string json_str2 = R"({"key1": 100, "key2": 200, "key3": 300})";
-//    std::map<std::string, std::any> dataMap2=comment->JsonDoDict<std::string,std::any>(json_str2);
+//    std::map<std::string, std::any> dataMap2=comment.JsonDoDict<std::string,std::any>(json_str2);
 //
 //
 //    std::string json_str3 = R"({"key1": 100.1, "key2": 200.2, "key3": 300.3})";
-//    std::map<std::string, std::any> dataMap3=comment->JsonDoDict<std::string,std::any>(json_str3);
-////    for(auto& item:dataMap2){
-////        std::cout << item.first << ": " << item.second << std::endl;
-////    }
-//
-//    std::map<int, int> exampleMap = {
-//            {1, 3},
-//            {2, 5},
-//            {3, 7}
-//    };
-//
-//    nlohmann:: json json_str4 = comment->MapToJson(exampleMap);
-//    std::cout << json_str4 << std::endl; // 格式化输出，缩进为4个空格
-//
-//    std::map<std::string, std::any> dataMap4=comment->JsonDoDict<std::string,std::any>(json_str4);
+//    std::map<std::string, std::any> dataMap3=comment.JsonDoDict<std::string,std::any>(json_str3);
+//    for(auto& item:dataMap2){
+//        std::cout << item.first << ": " << item.second << std::endl;
+//    }
+
+    std::map<int, int> exampleMap = {
+            {1, 3},
+            {2, 5},
+            {3, 7}
+    };
+
+    nlohmann:: json json_str4 = comment.MapToJson(exampleMap);
+    std::cout << json_str4 << std::endl; // 格式化输出，缩进为4个空格
+
+    std::map<std::string, std::any> dataMap4=comment.JsonDoDict<std::string,std::any>(json_str4);
 
     std::string jsonString = R"({
         "name": "John",
@@ -456,6 +456,7 @@ int main(){
     }
 
 
+     JsonValueUtil::Fromobj<MyObject>::jsonToObject(obj,j["object1"]);
 
     // 打印所有字段值
     dyrefl::For<MyObject>::for_each_propertie_value(obj, [](const char* name, auto&& value) {

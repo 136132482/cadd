@@ -1,3 +1,0 @@
-"E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Logger.dir/objects.a
-D:\msys64\mingw64\bin\llvm-ar.exe qc CMakeFiles\Logger.dir/objects.a @CMakeFiles\Logger.dir\objects1.rsp
-D:\msys64\mingw64\bin\clang++.exe -g -Wl,--whole-archive CMakeFiles\Logger.dir/objects.a -Wl,--no-whole-archive -o Logger.exe -Wl,--out-implib,libLogger.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Logger.dir\linkLibs.rsp

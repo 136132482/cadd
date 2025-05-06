@@ -52,10 +52,10 @@ RM = "E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Administrator\CLionProjects\cadd
+CMAKE_SOURCE_DIR = D:\CLionProjects\cadd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug
+CMAKE_BINARY_DIR = D:\CLionProjects\cadd\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/comment_util.dir/depend.make
@@ -69,32 +69,32 @@ include CMakeFiles/comment_util.dir/progress.make
 include CMakeFiles/comment_util.dir/flags.make
 
 CMakeFiles/comment_util.dir/util/comment_util.cpp.obj: CMakeFiles/comment_util.dir/flags.make
-CMakeFiles/comment_util.dir/util/comment_util.cpp.obj: C:/Users/Administrator/CLionProjects/cadd/util/comment_util.cpp
+CMakeFiles/comment_util.dir/util/comment_util.cpp.obj: D:/CLionProjects/cadd/util/comment_util.cpp
 CMakeFiles/comment_util.dir/util/comment_util.cpp.obj: CMakeFiles/comment_util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/comment_util.dir/util/comment_util.cpp.obj"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/comment_util.dir/util/comment_util.cpp.obj -MF CMakeFiles\comment_util.dir\util\comment_util.cpp.obj.d -o CMakeFiles\comment_util.dir\util\comment_util.cpp.obj -c C:\Users\Administrator\CLionProjects\cadd\util\comment_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/comment_util.dir/util/comment_util.cpp.obj"
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/comment_util.dir/util/comment_util.cpp.obj -MF CMakeFiles\comment_util.dir\util\comment_util.cpp.obj.d -o CMakeFiles\comment_util.dir\util\comment_util.cpp.obj -c D:\CLionProjects\cadd\util\comment_util.cpp
 
 CMakeFiles/comment_util.dir/util/comment_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/comment_util.dir/util/comment_util.cpp.i"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\CLionProjects\cadd\util\comment_util.cpp > CMakeFiles\comment_util.dir\util\comment_util.cpp.i
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\cadd\util\comment_util.cpp > CMakeFiles\comment_util.dir\util\comment_util.cpp.i
 
 CMakeFiles/comment_util.dir/util/comment_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/comment_util.dir/util/comment_util.cpp.s"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\CLionProjects\cadd\util\comment_util.cpp -o CMakeFiles\comment_util.dir\util\comment_util.cpp.s
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\cadd\util\comment_util.cpp -o CMakeFiles\comment_util.dir\util\comment_util.cpp.s
 
 CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj: CMakeFiles/comment_util.dir/flags.make
-CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj: C:/Users/Administrator/CLionProjects/cadd/util/JsonValueUtil.cpp
+CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj: D:/CLionProjects/cadd/util/JsonValueUtil.cpp
 CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj: CMakeFiles/comment_util.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj -MF CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.obj.d -o CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.obj -c C:\Users\Administrator\CLionProjects\cadd\util\JsonValueUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj"
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj -MF CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.obj.d -o CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.obj -c D:\CLionProjects\cadd\util\JsonValueUtil.cpp
 
 CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.i"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\CLionProjects\cadd\util\JsonValueUtil.cpp > CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.i
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\cadd\util\JsonValueUtil.cpp > CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.i
 
 CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.s"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\CLionProjects\cadd\util\JsonValueUtil.cpp -o CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.s
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\cadd\util\JsonValueUtil.cpp -o CMakeFiles\comment_util.dir\util\JsonValueUtil.cpp.s
 
 # Object files for target comment_util
 comment_util_OBJECTS = \
@@ -110,9 +110,9 @@ comment_util.exe: CMakeFiles/comment_util.dir/build.make
 comment_util.exe: CMakeFiles/comment_util.dir/linkLibs.rsp
 comment_util.exe: CMakeFiles/comment_util.dir/objects1.rsp
 comment_util.exe: CMakeFiles/comment_util.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable comment_util.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable comment_util.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\comment_util.dir\link.txt --verbose=$(VERBOSE)
-	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Administrator/.vcpkg-clion/vcpkg1/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/comment_util.exe -installedDir C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/debug/bin -OutVariable out
+	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/CLionProjects/cadd/cmake-build-debug/comment_util.exe -installedDir E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/bin -OutVariable out
 
 # Rule to build all files generated by this target.
 CMakeFiles/comment_util.dir/build: comment_util.exe
@@ -123,6 +123,6 @@ CMakeFiles/comment_util.dir/clean:
 .PHONY : CMakeFiles/comment_util.dir/clean
 
 CMakeFiles/comment_util.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Administrator\CLionProjects\cadd C:\Users\Administrator\CLionProjects\cadd C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles\comment_util.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\CLionProjects\cadd D:\CLionProjects\cadd D:\CLionProjects\cadd\cmake-build-debug D:\CLionProjects\cadd\cmake-build-debug D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles\comment_util.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/comment_util.dir/depend
 

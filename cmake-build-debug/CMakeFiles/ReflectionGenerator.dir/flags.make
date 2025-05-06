@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -g -std=gnu++17 -fcolor-diagnostics
+CXX_FLAGS =  -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1 -stdlib=libstdc++ -g -std=gnu++17 -fcolor-diagnostics -Wall -Wextra -Wno-unused-parameter
 

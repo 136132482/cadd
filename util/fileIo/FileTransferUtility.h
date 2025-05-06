@@ -3,14 +3,10 @@
 #include <string>
 #include <vector>
 #include <map>
-#include <thread>
 #include <mutex>
 #include <atomic>
 #include <fstream>
 #include <functional>
-#include <future>
-#include <queue>
-#include <condition_variable>
 #include <filesystem>
 #include <curl/curl.h>
 #include <iostream>
@@ -58,22 +54,14 @@ public:
 
     // 批量操作
     void batchUpload(const std::vector<std::pair<std::string, std::string>>& filePairs,
-                     int maxThreads = 4, bool resume = false,
-                     ProgressCallback progressCb = nullptr, StateCallback stateCb = nullptr);
+                     bool resume = false,
+                     ProgressCallback progressCb = nullptr,
+                     StateCallback stateCb = nullptr);
 
     void batchDownload(const std::vector<std::pair<std::string, std::string>>& urlPairs,
-                       int maxThreads = 4, bool resume = false,
-                       ProgressCallback progressCb = nullptr, StateCallback stateCb = nullptr);
-
-    // 控制操作
-    void pauseTransfer(const std::string& fileIdentifier);
-    void resumeTransfer(const std::string& fileIdentifier);
-    void cancelTransfer(const std::string& fileIdentifier);
-    void cancelAllTransfers();
-
-    // 获取状态
-    TransferState getTransferState(const std::string& fileIdentifier) const;
-    std::map<std::string, TransferState> getAllTransferStates() const;
+                       bool resume = false,
+                       ProgressCallback progressCb = nullptr,
+                       StateCallback stateCb = nullptr);
 
     // 工具方法
     static FileType getFileType(const std::string& filePath);
@@ -96,36 +84,11 @@ private:
         std::atomic<bool> cancelled;
         ProgressCallback progressCallback;
         StateCallback stateCallback;
-        std::shared_ptr<std::thread> workerThread;
     };
-
-    // 线程池
-    class ThreadPool {
-    public:
-        explicit ThreadPool(size_t threads);
-        ~ThreadPool();
-
-        template<class F, class... Args>
-        auto enqueue(F&& f, Args&&... args)
-        -> std::future<typename std::result_of<F(Args...)>::type>;
-
-    private:
-        std::vector<std::thread> workers;
-        std::queue<std::function<void()>> tasks;
-        std::mutex queueMutex;
-        std::condition_variable condition;
-        std::atomic<bool> stop;
-    };
-
-    // 成员变量
-    std::unique_ptr<ThreadPool> threadPool;
-    mutable std::mutex tasksMutex;
-    std::map<std::string, std::shared_ptr<TransferTask>> activeTasks;
 
     // 内部方法
-    void executeTransferTask(std::shared_ptr<TransferTask> task);
-    static bool doUpload(TransferTask& task);
-    static bool doDownload(TransferTask& task);
+    bool doUpload(TransferTask& task);
+    bool doDownload(TransferTask& task);
     static size_t writeDataCallback(void* ptr, size_t size, size_t nmemb, void* userdata);
     static size_t readDataCallback(void* ptr, size_t size, size_t nmemb, void* userdata);
     static int progressCallback(void* clientp, curl_off_t dltotal, curl_off_t dlnow,

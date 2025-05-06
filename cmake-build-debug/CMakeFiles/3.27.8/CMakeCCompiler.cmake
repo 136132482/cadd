@@ -1,7 +1,7 @@
 set(CMAKE_C_COMPILER "D:/msys64/mingw64/bin/clang.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "Clang")
-set(CMAKE_C_COMPILER_VERSION "19.1.4")
+set(CMAKE_C_COMPILER_VERSION "20.1.3")
 set(CMAKE_C_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_C_COMPILER_WRAPPER "")
 set(CMAKE_C_STANDARD_COMPUTED_DEFAULT "17")
@@ -68,7 +68,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/msys64/mingw64/lib/clang/19/include;D:/msys64/mingw64/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/msys64/mingw64/lib/clang/20/include;D:/msys64/mingw64/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;kernel32")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/19/lib/windows")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0;D:/msys64/mingw64/x86_64-w64-mingw32/lib;D:/msys64/mingw64/x86_64-w64-mingw32/mingw/lib;D:/msys64/mingw64/lib;D:/msys64/mingw64/lib/clang/20/lib/windows")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

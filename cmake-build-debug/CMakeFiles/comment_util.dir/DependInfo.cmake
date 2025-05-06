@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Administrator/CLionProjects/cadd/util/JsonValueUtil.cpp" "CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj" "gcc" "CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj.d"
-  "C:/Users/Administrator/CLionProjects/cadd/util/comment_util.cpp" "CMakeFiles/comment_util.dir/util/comment_util.cpp.obj" "gcc" "CMakeFiles/comment_util.dir/util/comment_util.cpp.obj.d"
+  "D:/CLionProjects/cadd/util/JsonValueUtil.cpp" "CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj" "gcc" "CMakeFiles/comment_util.dir/util/JsonValueUtil.cpp.obj.d"
+  "D:/CLionProjects/cadd/util/comment_util.cpp" "CMakeFiles/comment_util.dir/util/comment_util.cpp.obj" "gcc" "CMakeFiles/comment_util.dir/util/comment_util.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

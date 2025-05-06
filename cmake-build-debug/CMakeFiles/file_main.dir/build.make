@@ -52,10 +52,10 @@ RM = "E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Administrator\CLionProjects\cadd
+CMAKE_SOURCE_DIR = D:\CLionProjects\cadd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug
+CMAKE_BINARY_DIR = D:\CLionProjects\cadd\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/file_main.dir/depend.make
@@ -70,69 +70,37 @@ include CMakeFiles/file_main.dir/flags.make
 
 CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj: CMakeFiles/file_main.dir/flags.make
 CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj: CMakeFiles/file_main.dir/includes_CXX.rsp
-CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj: C:/Users/Administrator/CLionProjects/cadd/util/fileIo/file_main.cpp
+CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj: D:/CLionProjects/cadd/util/fileIo/file_main.cpp
 CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj: CMakeFiles/file_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj -MF CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.obj.d -o CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.obj -c C:\Users\Administrator\CLionProjects\cadd\util\fileIo\file_main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj"
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj -MF CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.obj.d -o CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.obj -c D:\CLionProjects\cadd\util\fileIo\file_main.cpp
 
 CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.i"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\CLionProjects\cadd\util\fileIo\file_main.cpp > CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.i
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\CLionProjects\cadd\util\fileIo\file_main.cpp > CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.i
 
 CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.s"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\CLionProjects\cadd\util\fileIo\file_main.cpp -o CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.s
-
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj: CMakeFiles/file_main.dir/flags.make
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj: CMakeFiles/file_main.dir/includes_CXX.rsp
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj: C:/Users/Administrator/CLionProjects/cadd/util/fileIo/FileTransferUtility.cpp
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj: CMakeFiles/file_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj -MF CMakeFiles\file_main.dir\util\fileIo\FileTransferUtility.cpp.obj.d -o CMakeFiles\file_main.dir\util\fileIo\FileTransferUtility.cpp.obj -c C:\Users\Administrator\CLionProjects\cadd\util\fileIo\FileTransferUtility.cpp
-
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.i"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\CLionProjects\cadd\util\fileIo\FileTransferUtility.cpp > CMakeFiles\file_main.dir\util\fileIo\FileTransferUtility.cpp.i
-
-CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.s"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\CLionProjects\cadd\util\fileIo\FileTransferUtility.cpp -o CMakeFiles\file_main.dir\util\fileIo\FileTransferUtility.cpp.s
-
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj: CMakeFiles/file_main.dir/flags.make
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj: CMakeFiles/file_main.dir/includes_CXX.rsp
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj: C:/Users/Administrator/CLionProjects/cadd/util/Logger/Logger.cpp
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj: CMakeFiles/file_main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj -MF CMakeFiles\file_main.dir\util\Logger\Logger.cpp.obj.d -o CMakeFiles\file_main.dir\util\Logger\Logger.cpp.obj -c C:\Users\Administrator\CLionProjects\cadd\util\Logger\Logger.cpp
-
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/file_main.dir/util/Logger/Logger.cpp.i"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Administrator\CLionProjects\cadd\util\Logger\Logger.cpp > CMakeFiles\file_main.dir\util\Logger\Logger.cpp.i
-
-CMakeFiles/file_main.dir/util/Logger/Logger.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/file_main.dir/util/Logger/Logger.cpp.s"
-	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Administrator\CLionProjects\cadd\util\Logger\Logger.cpp -o CMakeFiles\file_main.dir\util\Logger\Logger.cpp.s
+	D:\msys64\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\CLionProjects\cadd\util\fileIo\file_main.cpp -o CMakeFiles\file_main.dir\util\fileIo\file_main.cpp.s
 
 # Object files for target file_main
 file_main_OBJECTS = \
-"CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj" \
-"CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj" \
-"CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj"
+"CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj"
 
 # External object files for target file_main
 file_main_EXTERNAL_OBJECTS =
 
 file_main.exe: CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj
-file_main.exe: CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj
-file_main.exe: CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj
 file_main.exe: CMakeFiles/file_main.dir/build.make
-file_main.exe: C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/debug/lib/libcurl-d.lib
+file_main.exe: libFileTransferUtility.a
+file_main.exe: libLoggerLib.a
+file_main.exe: E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a
 file_main.exe: CMakeFiles/file_main.dir/linkLibs.rsp
 file_main.exe: CMakeFiles/file_main.dir/objects1.rsp
 file_main.exe: CMakeFiles/file_main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable file_main.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable file_main.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\file_main.dir\link.txt --verbose=$(VERBOSE)
-	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Administrator/.vcpkg-clion/vcpkg1/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug/file_main.exe -installedDir C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/debug/bin -OutVariable out
+	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file E:/.vcpkg-clion/vcpkg1/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/CLionProjects/cadd/cmake-build-debug/file_main.exe -installedDir E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/bin -OutVariable out
 
 # Rule to build all files generated by this target.
 CMakeFiles/file_main.dir/build: file_main.exe
@@ -143,6 +111,6 @@ CMakeFiles/file_main.dir/clean:
 .PHONY : CMakeFiles/file_main.dir/clean
 
 CMakeFiles/file_main.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Administrator\CLionProjects\cadd C:\Users\Administrator\CLionProjects\cadd C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles\file_main.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\CLionProjects\cadd D:\CLionProjects\cadd D:\CLionProjects\cadd\cmake-build-debug D:\CLionProjects\cadd\cmake-build-debug D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles\file_main.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/file_main.dir/depend
 

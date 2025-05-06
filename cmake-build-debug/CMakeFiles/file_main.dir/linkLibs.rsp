@@ -1,1 +1,1 @@
- -lws2_32 -lcrypt32 -lssl -lcrypto -lz "C:/Users/Administrator/.vcpkg-clion/vcpkg1/installed/x64-windows/debug/lib/libcurl-d.lib" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ libFileTransferUtility.a libLoggerLib.a -lws2_32 -lcrypt32 -lgdi32 -ladvapi32 "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

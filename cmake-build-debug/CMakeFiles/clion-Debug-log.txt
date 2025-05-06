@@ -1,4 +1,4 @@
-"E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/msys64/mingw64/bin/mingw32-make.exe -DCMAKE_C_COMPILER=D:/msys64/mingw64/bin/clang.exe -DCMAKE_CXX_COMPILER=D:/msys64/mingw64/bin/clang++.exe -DCMAKE_TOOLCHAIN_FILE=C:\Users\Administrator\.vcpkg-clion\vcpkg1\scripts\buildsystems\vcpkg.cmake -G "CodeBlocks - MinGW Makefiles" -S C:\Users\Administrator\CLionProjects\cadd -B C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug
+"E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/msys64/mingw64/bin/mingw32-make.exe -DCMAKE_C_COMPILER=D:/msys64/mingw64/bin/clang.exe -DCMAKE_CXX_COMPILER=D:/msys64/mingw64/bin/clang++.exe -DCMAKE_TOOLCHAIN_FILE=E:\.vcpkg-clion\vcpkg1\scripts\buildsystems\vcpkg.cmake -G "CodeBlocks - MinGW Makefiles" -S D:\CLionProjects\cadd -B D:\CLionProjects\cadd\cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 
@@ -8,6 +8,8 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.3s)
--- Generating done (0.5s)
--- Build files have been written to: C:/Users/Administrator/CLionProjects/cadd/cmake-build-debug
+-- Found ZLIB: optimized;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/lib/libzlib.dll.a;debug;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/lib/libzlibd.dll.a (found suitable version "1.3.1", minimum required is "1")  
+-- Found ZLIB: optimized;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/lib/libzlib.dll.a;debug;E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/lib/libzlibd.dll.a (found version "1.3.1")  
+-- Configuring done (2.6s)
+-- Generating done (1.7s)
+-- Build files have been written to: D:/CLionProjects/cadd/cmake-build-debug

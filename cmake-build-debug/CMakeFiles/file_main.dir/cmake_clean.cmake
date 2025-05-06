@@ -1,8 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj"
-  "CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj.d"
-  "CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj"
-  "CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj.d"
   "CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj"
   "CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.obj.d"
   "file_main.exe"

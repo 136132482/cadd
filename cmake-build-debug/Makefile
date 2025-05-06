@@ -56,10 +56,10 @@ RM = "E:\application\CLion 2023.3.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Administrator\CLionProjects\cadd
+CMAKE_SOURCE_DIR = D:\CLionProjects\cadd
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug
+CMAKE_BINARY_DIR = D:\CLionProjects\cadd\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles D:\CLionProjects\cadd\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Administrator\CLionProjects\cadd\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\CLionProjects\cadd\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -114,6 +114,45 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named LoggerLib
+
+# Build rule for target.
+LoggerLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 LoggerLib
+.PHONY : LoggerLib
+
+# fast build rule for target.
+LoggerLib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LoggerLib.dir\build.make CMakeFiles/LoggerLib.dir/build
+.PHONY : LoggerLib/fast
+
+#=============================================================================
+# Target rules for targets named FileTransferUtility
+
+# Build rule for target.
+FileTransferUtility: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 FileTransferUtility
+.PHONY : FileTransferUtility
+
+# fast build rule for target.
+FileTransferUtility/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileTransferUtility.dir\build.make CMakeFiles/FileTransferUtility.dir/build
+.PHONY : FileTransferUtility/fast
+
+#=============================================================================
+# Target rules for targets named CryptoUtilLib
+
+# Build rule for target.
+CryptoUtilLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CryptoUtilLib
+.PHONY : CryptoUtilLib
+
+# fast build rule for target.
+CryptoUtilLib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtilLib.dir\build.make CMakeFiles/CryptoUtilLib.dir/build
+.PHONY : CryptoUtilLib/fast
 
 #=============================================================================
 # Target rules for targets named Reflection
@@ -272,6 +311,45 @@ GenericFactory/fast:
 .PHONY : GenericFactory/fast
 
 #=============================================================================
+# Target rules for targets named CryptoUtil
+
+# Build rule for target.
+CryptoUtil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CryptoUtil
+.PHONY : CryptoUtil
+
+# fast build rule for target.
+CryptoUtil/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtil.dir\build.make CMakeFiles/CryptoUtil.dir/build
+.PHONY : CryptoUtil/fast
+
+#=============================================================================
+# Target rules for targets named drogon_test
+
+# Build rule for target.
+drogon_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 drogon_test
+.PHONY : drogon_test
+
+# fast build rule for target.
+drogon_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/build
+.PHONY : drogon_test/fast
+
+#=============================================================================
+# Target rules for targets named SociDB
+
+# Build rule for target.
+SociDB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 SociDB
+.PHONY : SociDB
+
+# fast build rule for target.
+SociDB/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/build
+.PHONY : SociDB/fast
+
+#=============================================================================
 # Target rules for targets named file_main
 
 # Build rule for target.
@@ -285,17 +363,30 @@ file_main/fast:
 .PHONY : file_main/fast
 
 #=============================================================================
-# Target rules for targets named Logger
+# Target rules for targets named ThreadExecutor
 
 # Build rule for target.
-Logger: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Logger
-.PHONY : Logger
+ThreadExecutor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 ThreadExecutor
+.PHONY : ThreadExecutor
 
 # fast build rule for target.
-Logger/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/build
-.PHONY : Logger/fast
+ThreadExecutor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/build
+.PHONY : ThreadExecutor/fast
+
+#=============================================================================
+# Target rules for targets named logger_test
+
+# Build rule for target.
+logger_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 logger_test
+.PHONY : logger_test
+
+# fast build rule for target.
+logger_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\logger_test.dir\build.make CMakeFiles/logger_test.dir/build
+.PHONY : logger_test/fast
 
 duotai.obj: duotai.cpp.obj
 .PHONY : duotai.obj
@@ -407,8 +498,7 @@ util/Logger/Logger.obj: util/Logger/Logger.cpp.obj
 
 # target to build an object file
 util/Logger/Logger.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/Logger/Logger.cpp.obj
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/Logger.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LoggerLib.dir\build.make CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj
 .PHONY : util/Logger/Logger.cpp.obj
 
 util/Logger/Logger.i: util/Logger/Logger.cpp.i
@@ -416,8 +506,7 @@ util/Logger/Logger.i: util/Logger/Logger.cpp.i
 
 # target to preprocess a source file
 util/Logger/Logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/Logger/Logger.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/Logger.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LoggerLib.dir\build.make CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.i
 .PHONY : util/Logger/Logger.cpp.i
 
 util/Logger/Logger.s: util/Logger/Logger.cpp.s
@@ -425,8 +514,7 @@ util/Logger/Logger.s: util/Logger/Logger.cpp.s
 
 # target to generate assembly for a file
 util/Logger/Logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/Logger/Logger.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/Logger.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\LoggerLib.dir\build.make CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.s
 .PHONY : util/Logger/Logger.cpp.s
 
 util/Logger/logger_test.obj: util/Logger/logger_test.cpp.obj
@@ -434,7 +522,7 @@ util/Logger/logger_test.obj: util/Logger/logger_test.cpp.obj
 
 # target to build an object file
 util/Logger/logger_test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/logger_test.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\logger_test.dir\build.make CMakeFiles/logger_test.dir/util/Logger/logger_test.cpp.obj
 .PHONY : util/Logger/logger_test.cpp.obj
 
 util/Logger/logger_test.i: util/Logger/logger_test.cpp.i
@@ -442,7 +530,7 @@ util/Logger/logger_test.i: util/Logger/logger_test.cpp.i
 
 # target to preprocess a source file
 util/Logger/logger_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/logger_test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\logger_test.dir\build.make CMakeFiles/logger_test.dir/util/Logger/logger_test.cpp.i
 .PHONY : util/Logger/logger_test.cpp.i
 
 util/Logger/logger_test.s: util/Logger/logger_test.cpp.s
@@ -450,8 +538,56 @@ util/Logger/logger_test.s: util/Logger/logger_test.cpp.s
 
 # target to generate assembly for a file
 util/Logger/logger_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Logger.dir\build.make CMakeFiles/Logger.dir/util/Logger/logger_test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\logger_test.dir\build.make CMakeFiles/logger_test.dir/util/Logger/logger_test.cpp.s
 .PHONY : util/Logger/logger_test.cpp.s
+
+util/ThreadExecutor/ThreadExecutor.obj: util/ThreadExecutor/ThreadExecutor.cpp.obj
+.PHONY : util/ThreadExecutor/ThreadExecutor.obj
+
+# target to build an object file
+util/ThreadExecutor/ThreadExecutor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/ThreadExecutor.cpp.obj
+.PHONY : util/ThreadExecutor/ThreadExecutor.cpp.obj
+
+util/ThreadExecutor/ThreadExecutor.i: util/ThreadExecutor/ThreadExecutor.cpp.i
+.PHONY : util/ThreadExecutor/ThreadExecutor.i
+
+# target to preprocess a source file
+util/ThreadExecutor/ThreadExecutor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/ThreadExecutor.cpp.i
+.PHONY : util/ThreadExecutor/ThreadExecutor.cpp.i
+
+util/ThreadExecutor/ThreadExecutor.s: util/ThreadExecutor/ThreadExecutor.cpp.s
+.PHONY : util/ThreadExecutor/ThreadExecutor.s
+
+# target to generate assembly for a file
+util/ThreadExecutor/ThreadExecutor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/ThreadExecutor.cpp.s
+.PHONY : util/ThreadExecutor/ThreadExecutor.cpp.s
+
+util/ThreadExecutor/thread_main.obj: util/ThreadExecutor/thread_main.cpp.obj
+.PHONY : util/ThreadExecutor/thread_main.obj
+
+# target to build an object file
+util/ThreadExecutor/thread_main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/thread_main.cpp.obj
+.PHONY : util/ThreadExecutor/thread_main.cpp.obj
+
+util/ThreadExecutor/thread_main.i: util/ThreadExecutor/thread_main.cpp.i
+.PHONY : util/ThreadExecutor/thread_main.i
+
+# target to preprocess a source file
+util/ThreadExecutor/thread_main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/thread_main.cpp.i
+.PHONY : util/ThreadExecutor/thread_main.cpp.i
+
+util/ThreadExecutor/thread_main.s: util/ThreadExecutor/thread_main.cpp.s
+.PHONY : util/ThreadExecutor/thread_main.s
+
+# target to generate assembly for a file
+util/ThreadExecutor/thread_main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/util/ThreadExecutor/thread_main.cpp.s
+.PHONY : util/ThreadExecutor/thread_main.cpp.s
 
 util/comment_util.obj: util/comment_util.cpp.obj
 .PHONY : util/comment_util.obj
@@ -476,6 +612,30 @@ util/comment_util.s: util/comment_util.cpp.s
 util/comment_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\comment_util.dir\build.make CMakeFiles/comment_util.dir/util/comment_util.cpp.s
 .PHONY : util/comment_util.cpp.s
+
+util/drogon/drogon_test.obj: util/drogon/drogon_test.cpp.obj
+.PHONY : util/drogon/drogon_test.obj
+
+# target to build an object file
+util/drogon/drogon_test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/util/drogon/drogon_test.cpp.obj
+.PHONY : util/drogon/drogon_test.cpp.obj
+
+util/drogon/drogon_test.i: util/drogon/drogon_test.cpp.i
+.PHONY : util/drogon/drogon_test.i
+
+# target to preprocess a source file
+util/drogon/drogon_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/util/drogon/drogon_test.cpp.i
+.PHONY : util/drogon/drogon_test.cpp.i
+
+util/drogon/drogon_test.s: util/drogon/drogon_test.cpp.s
+.PHONY : util/drogon/drogon_test.s
+
+# target to generate assembly for a file
+util/drogon/drogon_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/util/drogon/drogon_test.cpp.s
+.PHONY : util/drogon/drogon_test.cpp.s
 
 util/factory/GenericFactory.obj: util/factory/GenericFactory.cpp.obj
 .PHONY : util/factory/GenericFactory.obj
@@ -554,7 +714,7 @@ util/fileIo/FileTransferUtility.obj: util/fileIo/FileTransferUtility.cpp.obj
 
 # target to build an object file
 util/fileIo/FileTransferUtility.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileTransferUtility.dir\build.make CMakeFiles/FileTransferUtility.dir/util/fileIo/FileTransferUtility.cpp.obj
 .PHONY : util/fileIo/FileTransferUtility.cpp.obj
 
 util/fileIo/FileTransferUtility.i: util/fileIo/FileTransferUtility.cpp.i
@@ -562,7 +722,7 @@ util/fileIo/FileTransferUtility.i: util/fileIo/FileTransferUtility.cpp.i
 
 # target to preprocess a source file
 util/fileIo/FileTransferUtility.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileTransferUtility.dir\build.make CMakeFiles/FileTransferUtility.dir/util/fileIo/FileTransferUtility.cpp.i
 .PHONY : util/fileIo/FileTransferUtility.cpp.i
 
 util/fileIo/FileTransferUtility.s: util/fileIo/FileTransferUtility.cpp.s
@@ -570,7 +730,7 @@ util/fileIo/FileTransferUtility.s: util/fileIo/FileTransferUtility.cpp.s
 
 # target to generate assembly for a file
 util/fileIo/FileTransferUtility.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/fileIo/FileTransferUtility.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileTransferUtility.dir\build.make CMakeFiles/FileTransferUtility.dir/util/fileIo/FileTransferUtility.cpp.s
 .PHONY : util/fileIo/FileTransferUtility.cpp.s
 
 util/fileIo/file_main.obj: util/fileIo/file_main.cpp.obj
@@ -596,6 +756,30 @@ util/fileIo/file_main.s: util/fileIo/file_main.cpp.s
 util/fileIo/file_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/util/fileIo/file_main.cpp.s
 .PHONY : util/fileIo/file_main.cpp.s
+
+util/pgsql/SociDemo.obj: util/pgsql/SociDemo.cpp.obj
+.PHONY : util/pgsql/SociDemo.obj
+
+# target to build an object file
+util/pgsql/SociDemo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/util/pgsql/SociDemo.cpp.obj
+.PHONY : util/pgsql/SociDemo.cpp.obj
+
+util/pgsql/SociDemo.i: util/pgsql/SociDemo.cpp.i
+.PHONY : util/pgsql/SociDemo.i
+
+# target to preprocess a source file
+util/pgsql/SociDemo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/util/pgsql/SociDemo.cpp.i
+.PHONY : util/pgsql/SociDemo.cpp.i
+
+util/pgsql/SociDemo.s: util/pgsql/SociDemo.cpp.s
+.PHONY : util/pgsql/SociDemo.s
+
+# target to generate assembly for a file
+util/pgsql/SociDemo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/util/pgsql/SociDemo.cpp.s
+.PHONY : util/pgsql/SociDemo.cpp.s
 
 util/register/ClassRegister.obj: util/register/ClassRegister.cpp.obj
 .PHONY : util/register/ClassRegister.obj
@@ -717,6 +901,33 @@ util/register/dynamic_reflection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Reflection_dynamic.dir\build.make CMakeFiles/Reflection_dynamic.dir/util/register/dynamic_reflection.cpp.s
 .PHONY : util/register/dynamic_reflection.cpp.s
 
+util/ssl/CryptoUtil.obj: util/ssl/CryptoUtil.cpp.obj
+.PHONY : util/ssl/CryptoUtil.obj
+
+# target to build an object file
+util/ssl/CryptoUtil.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtilLib.dir\build.make CMakeFiles/CryptoUtilLib.dir/util/ssl/CryptoUtil.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtil.dir\build.make CMakeFiles/CryptoUtil.dir/util/ssl/CryptoUtil.cpp.obj
+.PHONY : util/ssl/CryptoUtil.cpp.obj
+
+util/ssl/CryptoUtil.i: util/ssl/CryptoUtil.cpp.i
+.PHONY : util/ssl/CryptoUtil.i
+
+# target to preprocess a source file
+util/ssl/CryptoUtil.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtilLib.dir\build.make CMakeFiles/CryptoUtilLib.dir/util/ssl/CryptoUtil.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtil.dir\build.make CMakeFiles/CryptoUtil.dir/util/ssl/CryptoUtil.cpp.i
+.PHONY : util/ssl/CryptoUtil.cpp.i
+
+util/ssl/CryptoUtil.s: util/ssl/CryptoUtil.cpp.s
+.PHONY : util/ssl/CryptoUtil.s
+
+# target to generate assembly for a file
+util/ssl/CryptoUtil.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtilLib.dir\build.make CMakeFiles/CryptoUtilLib.dir/util/ssl/CryptoUtil.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CryptoUtil.dir\build.make CMakeFiles/CryptoUtil.dir/util/ssl/CryptoUtil.cpp.s
+.PHONY : util/ssl/CryptoUtil.cpp.s
+
 vector.obj: vector.cpp.obj
 .PHONY : vector.obj
 
@@ -750,16 +961,23 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ClassRegister
+	@echo ... CryptoUtil
+	@echo ... CryptoUtilLib
+	@echo ... FileTransferUtility
 	@echo ... GenericFactory
 	@echo ... JsonValue
 	@echo ... JsonValueUtil
-	@echo ... Logger
+	@echo ... LoggerLib
 	@echo ... Reflection
 	@echo ... ReflectionGenerator
 	@echo ... Reflection_dynamic
+	@echo ... SociDB
+	@echo ... ThreadExecutor
 	@echo ... comment_util
+	@echo ... drogon_test
 	@echo ... duotai
 	@echo ... file_main
+	@echo ... logger_test
 	@echo ... template
 	@echo ... test
 	@echo ... vector
@@ -781,9 +999,18 @@ help:
 	@echo ... util/Logger/logger_test.obj
 	@echo ... util/Logger/logger_test.i
 	@echo ... util/Logger/logger_test.s
+	@echo ... util/ThreadExecutor/ThreadExecutor.obj
+	@echo ... util/ThreadExecutor/ThreadExecutor.i
+	@echo ... util/ThreadExecutor/ThreadExecutor.s
+	@echo ... util/ThreadExecutor/thread_main.obj
+	@echo ... util/ThreadExecutor/thread_main.i
+	@echo ... util/ThreadExecutor/thread_main.s
 	@echo ... util/comment_util.obj
 	@echo ... util/comment_util.i
 	@echo ... util/comment_util.s
+	@echo ... util/drogon/drogon_test.obj
+	@echo ... util/drogon/drogon_test.i
+	@echo ... util/drogon/drogon_test.s
 	@echo ... util/factory/GenericFactory.obj
 	@echo ... util/factory/GenericFactory.i
 	@echo ... util/factory/GenericFactory.s
@@ -799,6 +1026,9 @@ help:
 	@echo ... util/fileIo/file_main.obj
 	@echo ... util/fileIo/file_main.i
 	@echo ... util/fileIo/file_main.s
+	@echo ... util/pgsql/SociDemo.obj
+	@echo ... util/pgsql/SociDemo.i
+	@echo ... util/pgsql/SociDemo.s
 	@echo ... util/register/ClassRegister.obj
 	@echo ... util/register/ClassRegister.i
 	@echo ... util/register/ClassRegister.s
@@ -814,6 +1044,9 @@ help:
 	@echo ... util/register/dynamic_reflection.obj
 	@echo ... util/register/dynamic_reflection.i
 	@echo ... util/register/dynamic_reflection.s
+	@echo ... util/ssl/CryptoUtil.obj
+	@echo ... util/ssl/CryptoUtil.i
+	@echo ... util/ssl/CryptoUtil.s
 	@echo ... vector.obj
 	@echo ... vector.i
 	@echo ... vector.s
