@@ -1,2 +1,0 @@
-D:\msys64\mingw64\bin\llvm-ar.exe qc libLoggerLib.a CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj
-D:\msys64\mingw64\bin\llvm-ranlib.exe libLoggerLib.a

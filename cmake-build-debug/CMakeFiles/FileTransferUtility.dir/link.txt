@@ -1,2 +1,0 @@
-D:\msys64\mingw64\bin\llvm-ar.exe qc libFileTransferUtility.a CMakeFiles/FileTransferUtility.dir/util/fileIo/FileTransferUtility.cpp.obj
-D:\msys64\mingw64\bin\llvm-ranlib.exe libFileTransferUtility.a
