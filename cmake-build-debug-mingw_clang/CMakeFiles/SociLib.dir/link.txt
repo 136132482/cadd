@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libSociLib.a CMakeFiles/SociLib.dir/util/pgsql/SociDB.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libSociLib.a

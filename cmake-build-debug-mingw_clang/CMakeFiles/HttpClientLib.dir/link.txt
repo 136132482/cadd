@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libHttpClientLib.a CMakeFiles/HttpClientLib.dir/util/http/http_client.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libHttpClientLib.a

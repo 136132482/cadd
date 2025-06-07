@@ -1,0 +1,591 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cadd",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24,
+						25,
+						26,
+						27,
+						28,
+						29,
+						30,
+						31,
+						32,
+						33,
+						34,
+						35,
+						36,
+						37,
+						38,
+						39,
+						40,
+						41,
+						42,
+						43,
+						44,
+						45,
+						46,
+						47,
+						48,
+						49,
+						50,
+						51,
+						52,
+						53,
+						54,
+						55,
+						56,
+						57,
+						58,
+						59
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Annotations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Annotations-Debug-3acd09ff8611a053b9ce.json",
+					"name" : "Annotations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ApiCommonLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ApiCommonLib-Debug-5cf5c454e068c0200301.json",
+					"name" : "ApiCommonLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassRegister::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassRegister-Debug-2bdfa10632145158866a.json",
+					"name" : "ClassRegister",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ConfigManagerLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ConfigManagerLib-Debug-49d001064314de499e00.json",
+					"name" : "ConfigManagerLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CryptoUtil::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CryptoUtil-Debug-312606b01602284b2464.json",
+					"name" : "CryptoUtil",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CryptoUtilLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CryptoUtilLib-Debug-0c614158b74924d13afc.json",
+					"name" : "CryptoUtilLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DateUtilLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DateUtilLib-Debug-a4f12a7e8317eafbb7a8.json",
+					"name" : "DateUtilLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "EnumSystem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EnumSystem-Debug-129a0826b30308e4a875.json",
+					"name" : "EnumSystem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FileTransferUtility::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FileTransferUtility-Debug-41ca7bd0eb5d3f020d9e.json",
+					"name" : "FileTransferUtility",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GenericEnum::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GenericEnum-Debug-8b4a924f223b4a8d54d8.json",
+					"name" : "GenericEnum",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GenericFactory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GenericFactory-Debug-4a48cdf9f0b583e14be3.json",
+					"name" : "GenericFactory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HttpClientLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HttpClientLib-Debug-09307c4912dc389a01b7.json",
+					"name" : "HttpClientLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "JsonConversion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JsonConversion-Debug-52dff42457165ce4f89c.json",
+					"name" : "JsonConversion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "JsonValueUtil::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JsonValueUtil-Debug-6ce29cc53aff21efa700.json",
+					"name" : "JsonValueUtil",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LoggerLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LoggerLib-Debug-4302ebc3e09d36476265.json",
+					"name" : "LoggerLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OrderDeadLetterTask::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OrderDeadLetterTask-Debug-f13690f5fd5f9d251535.json",
+					"name" : "OrderDeadLetterTask",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OrderDispatcher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OrderDispatcher-Debug-2e9442858ab21db2a5d9.json",
+					"name" : "OrderDispatcher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OrderLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OrderLib-Debug-aa6b5ea6bd383a72ad61.json",
+					"name" : "OrderLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "OrderSubscriber::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-OrderSubscriber-Debug-fa5ebf8e18bb13c46630.json",
+					"name" : "OrderSubscriber",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Orderdeadletter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Orderdeadletter-Debug-5088c0c11f4a4a20d17a.json",
+					"name" : "Orderdeadletter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ordertaskscheduler_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ordertaskscheduler_test-Debug-f18c9dedb3752c807589.json",
+					"name" : "Ordertaskscheduler_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "RedisUtilLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-RedisUtilLib-Debug-43c9327a3ac1ac44c071.json",
+					"name" : "RedisUtilLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Reflection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Reflection-Debug-8b3e4527196b02235836.json",
+					"name" : "Reflection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ReflectionGenerator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ReflectionGenerator-Debug-b06463158176a06d4eeb.json",
+					"name" : "ReflectionGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Reflection_dynamic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Reflection_dynamic-Debug-d6d946726fb26afcdf1e.json",
+					"name" : "Reflection_dynamic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SociDB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SociDB-Debug-a0422500737133007eb3.json",
+					"name" : "SociDB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SociLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SociLib-Debug-7d168e7ea21d385fd15e.json",
+					"name" : "SociLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ThreadExecutor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ThreadExecutor-Debug-7a1b9eda5ee59215807f.json",
+					"name" : "ThreadExecutor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "UVehiccletaskscheduler_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-UVehiccletaskscheduler_test-Debug-0103682473cc1283a2ea.json",
+					"name" : "UVehiccletaskscheduler_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZmqInstance::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZmqInstance-Debug-ee2cde4f87999e8f882b.json",
+					"name" : "ZmqInstance",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "comment_util::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-comment_util-Debug-21d2a176382012a64f18.json",
+					"name" : "comment_util",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crow_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crow_main-Debug-733f9c2d58a34f1618c9.json",
+					"name" : "crow_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "date_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-date_test-Debug-438b36cd333a0f4b77b1.json",
+					"name" : "date_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "drogon_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-drogon_test-Debug-f9c76edf3b67e4d85e61.json",
+					"name" : "drogon_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "duotai::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-duotai-Debug-ab82b33f5f893f167b21.json",
+					"name" : "duotai",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "enumLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-enumLib-Debug-84ac2f21af447aab8dbb.json",
+					"name" : "enumLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "file_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-file_main-Debug-dbee3f93b5d98f706341.json",
+					"name" : "file_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geoApi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geoApi-Debug-b0cb24ae09fd9c96fc55.json",
+					"name" : "geoApi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "geoLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-geoLib-Debug-3a196e01b78d538ec5ae.json",
+					"name" : "geoLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "http_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-http_client-Debug-2a7d131970363d555a8a.json",
+					"name" : "http_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "http_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-http_main-Debug-7e522fe8cbbaa99ca2d6.json",
+					"name" : "http_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "logger_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-logger_test-Debug-4d5d7f6b12e395ba6fe9.json",
+					"name" : "logger_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "redis_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-redis_test-Debug-527602f7bd0cfd2219dc.json",
+					"name" : "redis_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "request_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-request_test-Debug-507dcbd7c1d4b5cd1993.json",
+					"name" : "request_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "taskSchedulerLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-taskSchedulerLib-Debug-142ff87881c6a1017b17.json",
+					"name" : "taskSchedulerLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "taskscheduler_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-taskscheduler_test-Debug-f1cd8dde3ae9cedbf477.json",
+					"name" : "taskscheduler_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "template::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-template-Debug-7bb1d4947830e909ffe8.json",
+					"name" : "template",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-Debug-0923f08e54cdd8e34ff2.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_config_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_config_main-Debug-8d9d7e575da865cf7366.json",
+					"name" : "test_config_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vector::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vector-Debug-0c2191249d354e7a1256.json",
+					"name" : "vector",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vehicle_thread_stress_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vehicle_thread_stress_test-Debug-90affaa8d99b438f5f23.json",
+					"name" : "vehicle_thread_stress_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ws_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ws_main-Debug-71d148511dc05c27b4ee.json",
+					"name" : "ws_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqLib-Debug-47a17c6e6777f42e11e9.json",
+					"name" : "zmqLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmq_test_pub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmq_test_pub-Debug-b509a60591e63388021a.json",
+					"name" : "zmq_test_pub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmq_test_sub::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmq_test_sub-Debug-9d017adb34ae0fd0fc98.json",
+					"name" : "zmq_test_sub",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqpublisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqpublisher-Debug-68ae00d8c8d93741e100.json",
+					"name" : "zmqpublisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqsubscriber::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqsubscriber-Debug-c24e6acb5f5ad1dbaa61.json",
+					"name" : "zmqsubscriber",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqsubscriber1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqsubscriber1-Debug-e93a72dbc4897db9ae7e.json",
+					"name" : "zmqsubscriber1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqsubscriber2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqsubscriber2-Debug-d0911d583c879220cbdd.json",
+					"name" : "zmqsubscriber2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "zmqsubscriber3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-zmqsubscriber3-Debug-4947c02c27970d0b69b4.json",
+					"name" : "zmqsubscriber3",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/CLionProjects/cadd/cmake-build-debug-mingw_clang",
+		"source" : "D:/CLionProjects/cadd"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,1 @@
+  -L"E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/lib"  "D:/msys64/mingw64/lib/libboost_json-mt.a" -lpthread -lws2_32 -lgdi32 -ladvapi32 "D:/msys64/mingw64/lib/libboost_container-mt.a" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

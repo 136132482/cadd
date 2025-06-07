@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libtaskSchedulerLib.a CMakeFiles/taskSchedulerLib.dir/util/task/TaskScheduler.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libtaskSchedulerLib.a

@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libgeoLib.a CMakeFiles/geoLib.dir/api/geocode/geoApi.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libgeoLib.a

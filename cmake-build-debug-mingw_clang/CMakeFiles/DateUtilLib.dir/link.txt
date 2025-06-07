@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libDateUtilLib.a CMakeFiles/DateUtilLib.dir/util/date/DateUtil.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libDateUtilLib.a

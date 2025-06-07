@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libApiCommonLib.a CMakeFiles/ApiCommonLib.dir/util/drogonweb/api/Annotations.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libApiCommonLib.a

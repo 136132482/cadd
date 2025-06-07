@@ -1,0 +1,2 @@
+D:\msys64\mingw64\bin\llvm-ar.exe qc libenumLib.a CMakeFiles/enumLib.dir/util/enum/EnumSystem.cpp.obj CMakeFiles/enumLib.dir/util/enum/GenericEnum.cpp.obj
+D:\msys64\mingw64\bin\llvm-ranlib.exe libenumLib.a
