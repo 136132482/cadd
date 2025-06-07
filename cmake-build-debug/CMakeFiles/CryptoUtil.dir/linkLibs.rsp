@@ -1,1 +1,0 @@
- "E:/.vcpkg-clion/vcpkg1/installed/x64-mingw-dynamic/debug/lib/libcrypto.dll.a" libCryptoUtilLib.a -lgdi32 -ladvapi32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
