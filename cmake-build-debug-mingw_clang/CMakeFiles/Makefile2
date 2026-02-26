@@ -871,10 +871,10 @@ CMakeFiles/CryptoUtil.dir/clean:
 # Target rules for target CMakeFiles/Annotations.dir
 
 # All Build rule for target.
-CMakeFiles/Annotations.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/Annotations.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/Annotations.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/Annotations.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/Annotations.dir/all: CMakeFiles/ApiCommonLib.dir/all
+CMakeFiles/Annotations.dir/all: CMakeFiles/HttpClientLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Annotations.dir\build.make CMakeFiles/Annotations.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Annotations.dir\build.make CMakeFiles/Annotations.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=1,2,3 "Built target Annotations"
@@ -900,8 +900,8 @@ CMakeFiles/Annotations.dir/clean:
 # Target rules for target CMakeFiles/drogon_test.dir
 
 # All Build rule for target.
-CMakeFiles/drogon_test.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/drogon_test.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/drogon_test.dir/all: CMakeFiles/LoggerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\drogon_test.dir\build.make CMakeFiles/drogon_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=57,58 "Built target drogon_test"
@@ -927,8 +927,8 @@ CMakeFiles/drogon_test.dir/clean:
 # Target rules for target CMakeFiles/SociDB.dir
 
 # All Build rule for target.
-CMakeFiles/SociDB.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/SociDB.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/SociDB.dir/all: CMakeFiles/LoggerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SociDB.dir\build.make CMakeFiles/SociDB.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=44 "Built target SociDB"
@@ -954,8 +954,8 @@ CMakeFiles/SociDB.dir/clean:
 # Target rules for target CMakeFiles/file_main.dir
 
 # All Build rule for target.
-CMakeFiles/file_main.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/file_main.dir/all: CMakeFiles/FileTransferUtility.dir/all
+CMakeFiles/file_main.dir/all: CMakeFiles/LoggerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\file_main.dir\build.make CMakeFiles/file_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=62,63 "Built target file_main"
@@ -981,8 +981,8 @@ CMakeFiles/file_main.dir/clean:
 # Target rules for target CMakeFiles/ThreadExecutor.dir
 
 # All Build rule for target.
-CMakeFiles/ThreadExecutor.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/ThreadExecutor.dir/all: CMakeFiles/FileTransferUtility.dir/all
+CMakeFiles/ThreadExecutor.dir/all: CMakeFiles/LoggerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ThreadExecutor.dir\build.make CMakeFiles/ThreadExecutor.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=47,48 "Built target ThreadExecutor"
@@ -1060,8 +1060,8 @@ CMakeFiles/request_test.dir/clean:
 # Target rules for target CMakeFiles/JsonConversion.dir
 
 # All Build rule for target.
-CMakeFiles/JsonConversion.dir/all: CMakeFiles/SociLib.dir/all
 CMakeFiles/JsonConversion.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/JsonConversion.dir/all: CMakeFiles/SociLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JsonConversion.dir\build.make CMakeFiles/JsonConversion.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\JsonConversion.dir\build.make CMakeFiles/JsonConversion.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=24,25 "Built target JsonConversion"
@@ -1087,8 +1087,8 @@ CMakeFiles/JsonConversion.dir/clean:
 # Target rules for target CMakeFiles/http_main.dir
 
 # All Build rule for target.
-CMakeFiles/http_main.dir/all: CMakeFiles/HttpClientLib.dir/all
 CMakeFiles/http_main.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/http_main.dir/all: CMakeFiles/HttpClientLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_main.dir\build.make CMakeFiles/http_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\http_main.dir\build.make CMakeFiles/http_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=69,70 "Built target http_main"
@@ -1192,17 +1192,17 @@ CMakeFiles/test_config_main.dir/clean:
 # Target rules for target CMakeFiles/OrderSubscriber.dir
 
 # All Build rule for target.
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/OrderLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/RedisUtilLib.dir/all
 CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/geoLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/zmqLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/HttpClientLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/taskSchedulerLib.dir/all
-CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/enumLib.dir/all
 CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/RedisUtilLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/LoggerLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/zmqLib.dir/all
 CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/OrderLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/enumLib.dir/all
+CMakeFiles/OrderSubscriber.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderSubscriber.dir\build.make CMakeFiles/OrderSubscriber.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderSubscriber.dir\build.make CMakeFiles/OrderSubscriber.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=33,34 "Built target OrderSubscriber"
@@ -1228,17 +1228,17 @@ CMakeFiles/OrderSubscriber.dir/clean:
 # Target rules for target CMakeFiles/OrderDispatcher.dir
 
 # All Build rule for target.
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/OrderLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/RedisUtilLib.dir/all
 CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/geoLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/zmqLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/HttpClientLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/taskSchedulerLib.dir/all
-CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/enumLib.dir/all
 CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/RedisUtilLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/LoggerLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/zmqLib.dir/all
 CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/OrderLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/enumLib.dir/all
+CMakeFiles/OrderDispatcher.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderDispatcher.dir\build.make CMakeFiles/OrderDispatcher.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderDispatcher.dir\build.make CMakeFiles/OrderDispatcher.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=30,31 "Built target OrderDispatcher"
@@ -1264,17 +1264,17 @@ CMakeFiles/OrderDispatcher.dir/clean:
 # Target rules for target CMakeFiles/vehicle_thread_stress_test.dir
 
 # All Build rule for target.
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/OrderLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
 CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/geoLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/zmqLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/HttpClientLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
-CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/enumLib.dir/all
 CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/LoggerLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/zmqLib.dir/all
 CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/OrderLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/enumLib.dir/all
+CMakeFiles/vehicle_thread_stress_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vehicle_thread_stress_test.dir\build.make CMakeFiles/vehicle_thread_stress_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\vehicle_thread_stress_test.dir\build.make CMakeFiles/vehicle_thread_stress_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=85 "Built target vehicle_thread_stress_test"
@@ -1564,8 +1564,8 @@ CMakeFiles/date_test.dir/clean:
 
 # All Build rule for target.
 CMakeFiles/taskscheduler_test.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/taskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 CMakeFiles/taskscheduler_test.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/taskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\taskscheduler_test.dir\build.make CMakeFiles/taskscheduler_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\taskscheduler_test.dir\build.make CMakeFiles/taskscheduler_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=77 "Built target taskscheduler_test"
@@ -1643,16 +1643,16 @@ CMakeFiles/EnumSystem.dir/clean:
 # Target rules for target CMakeFiles/Ordertaskscheduler_test.dir
 
 # All Build rule for target.
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/OrderLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
 CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/geoLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/HttpClientLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
-CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/enumLib.dir/all
 CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/OrderLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/enumLib.dir/all
+CMakeFiles/Ordertaskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ordertaskscheduler_test.dir\build.make CMakeFiles/Ordertaskscheduler_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Ordertaskscheduler_test.dir\build.make CMakeFiles/Ordertaskscheduler_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=36,37 "Built target Ordertaskscheduler_test"
@@ -1678,16 +1678,16 @@ CMakeFiles/Ordertaskscheduler_test.dir/clean:
 # Target rules for target CMakeFiles/UVehiccletaskscheduler_test.dir
 
 # All Build rule for target.
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/OrderLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
 CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/geoLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/HttpClientLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
-CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/enumLib.dir/all
 CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/RedisUtilLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/OrderLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/HttpClientLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/enumLib.dir/all
+CMakeFiles/UVehiccletaskscheduler_test.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\UVehiccletaskscheduler_test.dir\build.make CMakeFiles/UVehiccletaskscheduler_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\UVehiccletaskscheduler_test.dir\build.make CMakeFiles/UVehiccletaskscheduler_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=49,50 "Built target UVehiccletaskscheduler_test"
@@ -1713,8 +1713,8 @@ CMakeFiles/UVehiccletaskscheduler_test.dir/clean:
 # Target rules for target CMakeFiles/geoApi.dir
 
 # All Build rule for target.
-CMakeFiles/geoApi.dir/all: CMakeFiles/HttpClientLib.dir/all
 CMakeFiles/geoApi.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/geoApi.dir/all: CMakeFiles/HttpClientLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geoApi.dir\build.make CMakeFiles/geoApi.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\geoApi.dir\build.make CMakeFiles/geoApi.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=64 "Built target geoApi"
@@ -1766,11 +1766,11 @@ CMakeFiles/Orderdeadletter.dir/clean:
 # Target rules for target CMakeFiles/OrderDeadLetterTask.dir
 
 # All Build rule for target.
-CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/LoggerLib.dir/all
-CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/SociLib.dir/all
-CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/CryptoUtilLib.dir/all
+CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/SociLib.dir/all
+CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/LoggerLib.dir/all
 CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/DateUtilLib.dir/all
+CMakeFiles/OrderDeadLetterTask.dir/all: CMakeFiles/taskSchedulerLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderDeadLetterTask.dir\build.make CMakeFiles/OrderDeadLetterTask.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\OrderDeadLetterTask.dir\build.make CMakeFiles/OrderDeadLetterTask.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\CLionProjects\cadd\cmake-build-debug-mingw_clang\CMakeFiles --progress-num=29 "Built target OrderDeadLetterTask"

@@ -6,5 +6,5 @@ CXX_DEFINES = -DASIO_STANDALONE -DBOOST_CONTAINER_NO_LIB -DBOOST_CONTAINER_STATI
 
 CXX_INCLUDES = @CMakeFiles/crow_main.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1 -stdlib=libstdc++ -g -std=gnu++20 -fcolor-diagnostics -Wall -Wextra -Wno-unused-parameter
+CXX_FLAGS =  -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1 -stdlib=libstdc++ -g -std=gnu++17 -fcolor-diagnostics -Wall -Wextra -Wno-unused-parameter
 

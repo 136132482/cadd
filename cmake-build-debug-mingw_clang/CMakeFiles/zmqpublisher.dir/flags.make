@@ -6,5 +6,5 @@ CXX_DEFINES = -DCMAKE_SOURCE_DIR=\"D:/CLionProjects/cadd\"
 
 CXX_INCLUDES = @CMakeFiles/zmqpublisher.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1 -stdlib=libstdc++ -g -std=gnu++20 -fcolor-diagnostics -Wall -Wextra -Wno-unused-parameter
+CXX_FLAGS =  -stdlib=libstdc++ -D_GLIBCXX_USE_CXX11_ABI=1 -stdlib=libstdc++ -g -std=gnu++17 -fcolor-diagnostics -Wall -Wextra -Wno-unused-parameter
 

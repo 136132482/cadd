@@ -28,24 +28,14 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/sec_api/wchar_s.h \
   D:/msys64/mingw64/include/c++/15.1.0/type_traits \
   D:/msys64/mingw64/include/c++/15.1.0/bits/version.h \
-  D:/msys64/mingw64/include/c++/15.1.0/compare \
-  D:/msys64/mingw64/include/c++/15.1.0/concepts \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_construct.h \
-  D:/msys64/mingw64/include/c++/15.1.0/new \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/exception.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/move.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_iterator_base_types.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/iterator_concepts.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ptr_traits.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ranges_cmp.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_iterator_base_funcs.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/concept_check.h \
-  D:/msys64/mingw64/include/c++/15.1.0/debug/assertions.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/allocator.h \
   D:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++allocator.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/new_allocator.h \
+  D:/msys64/mingw64/include/c++/15.1.0/new \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/exception.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/functexcept.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/exception_defines.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/move.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/cpp_type_traits.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/localefwd.h \
   D:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++locale.h \
@@ -58,8 +48,13 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/ctype.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/ostream_insert.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/cxxabi_forced.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_iterator_base_funcs.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/concept_check.h \
+  D:/msys64/mingw64/include/c++/15.1.0/debug/assertions.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_iterator_base_types.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/stl_iterator.h \
   D:/msys64/mingw64/include/c++/15.1.0/ext/type_traits.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/ptr_traits.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/stl_function.h \
   D:/msys64/mingw64/include/c++/15.1.0/backward/binders.h \
   D:/msys64/mingw64/include/c++/15.1.0/ext/numeric_traits.h \
@@ -69,6 +64,7 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/c++/15.1.0/debug/debug.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/predefined_ops.h \
   D:/msys64/mingw64/include/c++/15.1.0/bit \
+  D:/msys64/mingw64/include/c++/15.1.0/concepts \
   D:/msys64/mingw64/include/c++/15.1.0/bits/refwrap.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/invoke.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/range_access.h \
@@ -76,12 +72,10 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/c++/15.1.0/bits/basic_string.h \
   D:/msys64/mingw64/include/c++/15.1.0/ext/alloc_traits.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/alloc_traits.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_construct.h \
   D:/msys64/mingw64/include/c++/15.1.0/string_view \
   D:/msys64/mingw64/include/c++/15.1.0/bits/functional_hash.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/hash_bytes.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ranges_base.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/max_size_type.h \
-  D:/msys64/mingw64/include/c++/15.1.0/numbers \
   D:/msys64/mingw64/include/c++/15.1.0/bits/string_view.tcc \
   D:/msys64/mingw64/include/c++/15.1.0/ext/string_conversions.h \
   D:/msys64/mingw64/include/c++/15.1.0/cstdlib \
@@ -113,7 +107,6 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/c++/15.1.0/bits/uses_allocator.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/uses_allocator_args.h \
   D:/msys64/mingw64/include/c++/15.1.0/tuple \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ranges_util.h \
   D:/msys64/mingw64/include/c++/15.1.0/mutex \
   D:/msys64/mingw64/include/c++/15.1.0/bits/chrono.h \
   D:/msys64/mingw64/include/c++/15.1.0/ratio \
@@ -184,43 +177,21 @@ CMakeFiles/LoggerLib.dir/util/Logger/Logger.cpp.obj: \
   D:/msys64/mingw64/include/c++/15.1.0/sstream \
   D:/msys64/mingw64/include/c++/15.1.0/bits/sstream.tcc \
   D:/msys64/mingw64/include/c++/15.1.0/chrono \
-  D:/msys64/mingw64/include/c++/15.1.0/vector \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_uninitialized.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_vector.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_bvector.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/vector.tcc \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_algo.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/algorithmfwd.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_heap.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/uniform_int_dist.h \
+  D:/msys64/mingw64/include/c++/15.1.0/memory \
   D:/msys64/mingw64/include/c++/15.1.0/bits/stl_tempbuf.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_uninitialized.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_raw_storage_iter.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/align.h \
+  D:/msys64/mingw64/include/c++/15.1.0/bits/unique_ptr.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/shared_ptr.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/shared_ptr_base.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/allocated_ptr.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/unique_ptr.h \
   D:/msys64/mingw64/include/c++/15.1.0/ext/aligned_buffer.h \
   D:/msys64/mingw64/include/c++/15.1.0/ext/concurrence.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/align.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/chrono_io.h \
-  D:/msys64/mingw64/include/c++/15.1.0/format \
-  D:/msys64/mingw64/include/c++/15.1.0/array \
-  D:/msys64/mingw64/include/c++/15.1.0/charconv \
-  D:/msys64/mingw64/include/c++/15.1.0/optional \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/enable_special_members.h \
-  D:/msys64/mingw64/include/c++/15.1.0/span \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/monostate.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/formatfwd.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ranges_algobase.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/unicode.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/unicode-data.h \
-  D:/msys64/mingw64/include/c++/15.1.0/memory \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/stl_raw_storage_iter.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/shared_ptr_atomic.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/atomic_base.h \
   D:/msys64/mingw64/include/c++/15.1.0/bits/atomic_lockfree_defines.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/atomic_wait.h \
   D:/msys64/mingw64/include/c++/15.1.0/backward/auto_ptr.h \
-  D:/msys64/mingw64/include/c++/15.1.0/bits/ranges_uninitialized.h \
   D:/msys64/mingw64/include/c++/15.1.0/pstl/glue_memory_defs.h \
   D:/msys64/mingw64/include/c++/15.1.0/pstl/execution_defs.h \
   D:/msys64/mingw64/include/c++/15.1.0/fstream \

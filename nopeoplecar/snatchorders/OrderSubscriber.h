@@ -11,7 +11,7 @@
 #include <BS_thread_pool.hpp>
 
 // 使用带优先级的线程池（数值越大优先级越高）
-static BS::thread_pool<BS::tp::priority> global_pool(4); // 4个核心线程
+static BS::thread_pool<BS::tp::priority> global_pool(100); // 4个核心线程
 
 // 优先级常量定义
 constexpr BS::pr HIGH_PRIORITY{10};
@@ -96,6 +96,12 @@ private:
 
     static inline std::mutex instances_mutex_;
     static inline std::unordered_map<int64_t, VehicleClient*> instances_;
+
+
+    std::atomic<bool> zmq_ready_{false};  // 新增订阅状态标志
+    std::condition_variable sub_cv_;       // 新增条件变量
+
+
 
     //            std::vector<std::string> to_process;
     ////            {
@@ -237,60 +243,32 @@ private:
             auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - now);
             long response_time_ms = duration.count();
 
-            // 4. 记录抢单日志
-            GrabLog log;
-            log.order_id = order->id;
-            log.uv_id = vehicle_id_;
-            log.status = 1;
-            log.result = 1;
-            log.created_at = now;
-            log.updated_at = now;
-            log.bid_amount = order->reward.value();
-            log.response_time=response_time_ms;
-            log.is_delete=0;
-            log_id = SociDB::insert(log);
-            if(!log_id){
-                throw std::runtime_error("线程冲突");
-            }
-            std::cout << "抢单日志记录成功，日志ID: " << log_id.value() << std::endl;
-
-            // 5. 创建配送任务
-            DeliveryTask task;
-            task.order_id = order->id;
-            task.uv_id = vehicle_id_;
-            task.status = 1;
-            task.start_time=now;
-            task.created_at = now;
-            task.updated_at = now;
-            task.is_delete=0;
-
-            task_id = SociDB::insert(task);
-            if(!task_id){
-                throw std::runtime_error("线程冲突");
-            }
-            std::cout << "配送任务创建成功，任务ID: " << task_id.value() << std::endl;
 //            tr.commit();
             // 6. 清理和通知
             remove_expired_order(order_id);
             notify_order_acquisition(*order);
             std::cout << "抢单成功处理完成: " << order_id << std::endl;
-            return {true, "抢单成功", order_id, now};
 
+            auto& pub = ZmqGlobal::InstanceManager::getPublisher("tcp://*:5558");
+            nlohmann::json task_msg = {
+                    {"order_id", order_id},
+                    {"uv_id", vehicle_id_},
+                    {"response_time_ms", response_time_ms},
+                    {"order_type_code", order->order_type_code.value()},
+                    {"order_reward", order->reward.value()}
+            };
+            pub.publish("order_log_task", task_msg.dump());
+
+            return {true, "抢单成功", order_id, now};
         } catch (const std::exception& e) {
             std::cerr << "抢单过程发生异常: " << e.what() << std::endl;
-            SociDB::update("UPDATE xc_uv_order SET status=0, version=0, uv_id =NULL WHERE order_id=? AND status=1 ",order_id);
-            // 6.2 清理已插入数据
-            if (log_id) SociDB::remove<GrabLog>(*log_id);
-            if (task_id) SociDB::remove<DeliveryTask>(*task_id);
-            // 6.3 重发消息
-            ZmqGlobal::InstanceManager::getPublisher("tcp://*:5557")
-                    .publish("order_retry", order_id, ZmqIn::ExchangeType::HEADERS, {
-                            {"type", std::to_string(order->order_type_code.value())},
-                            {"channel", "retry_orders"}
-                    });
             return {false, std::string("系统错误: ") + e.what(), order_id, now};
         }
     }
+
+
+
+
 
 
     void remove_expired_order(const std::string& order_id) const {
@@ -345,9 +323,14 @@ private:
             std::cout << "正在初始化消息订阅..." << std::endl;
             init_vehicle_subscriptions(vehicle_id_);
             std::cout << "消息订阅初始化成功" << std::endl;
+            // 2. 设置订阅完成标志
+
             std::mutex mtx;
             std::unique_lock<std::mutex> lock(mtx);
             cv_.wait(lock, [this] { return !running_; });
+
+//            zmq_ready_ = true;
+//            sub_cv_.notify_all(); // 关键点：通知主线程
         } catch (const zmq::error_t& e) {
             std::cerr << "ZMQ订阅失败: " << e.what();
             throw std::runtime_error("ZMQ初始化失败");
@@ -363,7 +346,7 @@ public:
     }
 
     void start() {
-        std::lock_guard<std::mutex> lock(mtx_);
+//        std::lock_guard<std::mutex> lock(mtx_);
         if (running_) {
             if (!running_) {
                 std::cerr << "错误：尝试在已停止状态启动\n";
@@ -373,7 +356,13 @@ public:
             try {
 //                sub_thread_ = std::thread(&VehicleClient::message_subscriber, this);
                 global_pool.detach_task([this]{VehicleClient::message_subscriber();},HIGH_PRIORITY);
-                // 明确显示线程创建
+//                // 等待订阅完成
+//                std::unique_lock<std::mutex> lock(mtx_);
+//                sub_cv_.wait_for(lock, 5s, [this]{
+//                    return zmq_ready_.load();
+//                });
+                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
                 std::cout << "正在创建抢单线程..." << std::endl;
 //                grab_thread_ = std::thread(&VehicleClient::grab_processor, this);
                 global_pool.detach_task([this]{VehicleClient::grab_processor();},HIGH_PRIORITY);
@@ -531,7 +520,11 @@ public:
                 std::cout << "[" << DateUtil::getCurrentTime() << "] "
                           << "收到订单状态更新: order_id=" << order_id
                           << ", new_status=" << order->status.value() << std::endl;
-                int64_t vehicle_id = std::stoll(headers.at("vehicle_id"));
+                auto vehicle = headers.find("vehicle_id");
+                int64_t vehicle_id;
+                if (vehicle != headers.end()) {
+                    vehicle_id = std::stoll(vehicle->second);
+                }
                 // 根据状态处理
                 switch (order->status.value()) {
                     case 1: // 已接单
@@ -565,6 +558,74 @@ public:
     }
 
 
+    static void order_update_logAndTask(
+            const std::string& topic,
+            const std::string& msg,
+            const std::unordered_map<std::string, std::string>& headers)
+    {
+        auto now = std::chrono::system_clock::now();
+        std::optional<int64_t> log_id;
+        std::optional<int64_t> task_id;
+        bool flag= true;
+        try {
+            auto j = nlohmann::json::parse(msg);
+            auto order_id = j["order_id"].get<std::string>();       // 明确转换为int64_t
+            auto vehicle_id = j["uv_id"].get<int64_t>();       // 同上
+            auto response_time_ms = j["response_time_ms"].get<long>();
+            auto order_type_code = j["order_type_code"].get<std::int64_t>();
+            auto order_reward = j["order_reward"].get<double>();
+            std::string type_code = std::to_string(order_type_code);  // 安全转换
+            // 4. 记录抢单日志
+            GrabLog log;
+            log.order_id = std::stoll(order_id);
+            log.uv_id = vehicle_id;
+            log.status = 1;
+            log.result = 1;
+            log.created_at = now;
+            log.updated_at = now;
+            log.bid_amount = order_reward;
+            log.response_time=response_time_ms;
+            log.is_delete=0;
+            log_id = SociDB::insert(log);
+            if(!log_id){
+                std::cerr << "抢单日志记录失败: " << log_id.value() << std::endl;
+                flag= false;
+            }
+            std::cout << "抢单日志记录成功，日志ID: " << log_id.value() << std::endl;
+            DeliveryTask task;
+            task.order_id = std::stoll(order_id);
+            task.uv_id = vehicle_id;
+            task.status = 1;
+            task.start_time=now;
+            task.created_at = now;
+            task.updated_at = now;
+            task.is_delete=0;
+            task_id = SociDB::insert(task);
+            if(!task_id){
+                std::cerr << "抢单任务记录失败: " << log_id.value() << std::endl;
+                flag= false;
+            }
+            std::cout << "配送任务创建成功，任务ID: " << task_id.value() << std::endl;
+            if(!flag){
+                SociDB::update("UPDATE xc_uv_order SET status=0, version=0, uv_id =NULL WHERE order_id=? AND status=1 ",order_id);
+                // 6.2 清理已插入数据
+                if (log_id) SociDB::remove<GrabLog>(*log_id);
+                if (task_id) SociDB::remove<DeliveryTask>(*task_id);
+                // 6.3 重发消息
+                ZmqGlobal::InstanceManager::getPublisher("tcp://*:5557")
+                        .publish("order_retry", order_id, ZmqIn::ExchangeType::HEADERS, {
+                                {"type", type_code},
+                                {"channel", "retry_orders"}
+                        });
+            }
+        } catch (const std::exception &e) {
+            std::cerr << "订单更新处理失败: " << e.what() << std::endl;
+        }
+    }
+
+
+
+
 
 
 
@@ -591,24 +652,53 @@ public:
             order_update_handler(topic, msg, new_headers);
         };
 
+
+        auto wrapped_update_log_task = [&vehicle_id](const std::string& topic,
+                                                    const std::string& msg,
+                                                    const std::unordered_map<std::string, std::string>& headers) {
+            auto new_headers = headers;
+            new_headers["vehicle_id"] = std::to_string(vehicle_id);
+            order_update_logAndTask(topic, msg, new_headers);
+        };
+
+
+
         auto& sub = ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5556");
         auto& update_sub = ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5557");
+        auto& task_sub = ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5558");
 
-        update_sub.subscribe_headers(
-                {{"type",codes.value()},{"channel","update_orders"}},
-                wrapped_update_handler,
-                "order_update");
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+        task_sub.subscribe({"order_log_task"},wrapped_update_log_task,
+                             ZmqIn::ExchangeType::DIRECT);
+
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
         update_sub.subscribe_headers(
                 {{"type",codes.value()},{"channel","retry_orders"}},
                 wrapped_handler,
                 "order_retry");
 
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+        update_sub.subscribe_headers(
+                {{"type",codes.value()},{"channel","update_orders"}},
+                wrapped_update_handler,
+                "order_update");
+
+
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
         // HEADERS模式订阅（车辆类型匹配）
         sub.subscribe_headers(
                 {{"type",codes.value()},{"channel","vehicle_orders"}},
                 wrapped_handler,
                 "vehicle_orders");
+
+
     }
 };
 

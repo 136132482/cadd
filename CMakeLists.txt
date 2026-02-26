@@ -13,7 +13,6 @@ add_compile_definitions(CMAKE_SOURCE_DIR="${CMAKE_SOURCE_DIR}")
 # 确保可执行文件输出到项目目录
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-
 project(cadd)
 
 # 编译器设置（使用 MSYS2 的 Clang）
@@ -65,7 +64,7 @@ find_package(croncpp REQUIRED)
 
 
         # C++标准设置
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(zmqLib STATIC

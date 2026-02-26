@@ -24,7 +24,11 @@ public:
 //            }
             std::cout << "[启动] 车辆ID: " << id << std::endl;
             vehicles_[id] = std::make_unique<VehicleClient>(id);
+//            global_pool.detach_task([this, id] {
+//                std::this_thread::sleep_for(std::chrono::milliseconds(id % 100 * 10)); // 按ID分散启动时间
             vehicles_[id]->start();
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+//            }, HIGH_PRIORITY);
             print_vehicle_ids();
         }
     }
@@ -71,7 +75,6 @@ public:
 
 private:
     std::unordered_map<int64_t, std::unique_ptr<VehicleClient>> vehicles_;
-
     void print_vehicle_ids() {
         std::cout << "当前运行车辆 (" << vehicles_.size() << "辆): [";
         bool first = true;
@@ -93,9 +96,8 @@ std::vector<int64_t> fetch_vehicle_ids(int limit) {
                 "ORDER BY uv_id ASC LIMIT ?",
                 last_loaded_id, limit
         );
-
         std::vector<int64_t> ids;
-        for (const auto& v : result) {
+        for (const auto& v : result){
             if (v.id) {
                 ids.push_back(*v.id);
                 last_loaded_id = *v.id;
@@ -114,6 +116,8 @@ void continuous_adding(VehicleManager& manager) {
         auto ids = fetch_vehicle_ids(1);
         if (!ids.empty()) {
             manager.add_vehicle(ids[0]);
+        }else{
+            break;
         }
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
@@ -124,21 +128,24 @@ int main() {
         // 初始化
         SociDB::init();
         RedisUtils::Initialize("127.0.0.1", 6379, "123456", 0, 100);
-
         VehicleManager manager;
+//        ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5556");
+//        ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5557");
+        ZmqGlobal::InstanceManager::getSubscriber("tcp://localhost:5558");
+//        ZmqGlobal::InstanceManager::getPublisher("tcp://*:5556");
+//        ZmqGlobal::InstanceManager::getPublisher("tcp://*:5557");
+        ZmqGlobal::InstanceManager::getPublisher("tcp://*:5558");
 
         // 启动初始车辆
-        auto initial_ids = fetch_vehicle_ids(1000);
+        auto initial_ids = fetch_vehicle_ids(100);
         for (auto id : initial_ids) {
             manager.add_vehicle(id);
         }
-
+//        std::this_thread::sleep_for(std::chrono::minutes(1));
         // 启动持续添加线程
-        global_pool.detach_task([&manager]{
-            std::this_thread::sleep_for(std::chrono::minutes(1));
+//        std::thread([&manager]{
             continuous_adding(manager);
-        },LOW_PRIORITY);
-
+//        }).detach();
         // 控制台命令处理
         global_pool.detach_task([]{
             std::cout << "\n输入车辆ID停止，按回车退出\n";
@@ -156,20 +163,16 @@ int main() {
                 }
             }
         });
-
         // 主循环
         while (running) {
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
         }
-
         // 清理
         manager.stop_all();
-
     } catch (const std::exception& e) {
         std::cerr << "[严重错误] " << e.what() << std::endl;
         running = false;
         return 1;
     }
-
     return 0;
 }
